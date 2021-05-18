@@ -1,0 +1,14 @@
+
+
+2021-05-18 16:55:56.900626
+
+
+2021-05-18 16:55:59.121987
+You:hi
+Robo:Hello, thanks for asking
+You:Why are Ensemble techniques more preferred than other classification models?
+Robo:Firstly the ensemble techniques assure about the reliability of the accuracy. This however can also be achieved for non-ensemble techniques by employing various reliability techniques. One such popular technique is k-fold cross validation. Secondly, it's the way how intelligently the classifications are predicted in ensemble techniques.
+You:yes
+Robo:Good to know that
+You:bye
+Robo:Bye! take care..

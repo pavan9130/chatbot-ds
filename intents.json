@@ -1,0 +1,290 @@
+{
+"intents": 
+[
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+         "context": [""]
+        },		 
+		 {"tag": "199",
+         "patterns": ["what is the difference between covariance and correlation?","difference between covariance and correlation?","what is correlation and covariance?"],
+         "responses": ["Covariance and correlation are two mathematical concepts which are commonly used in statistics. When comparing data samples from different populations, covariance is used to determine how much two random variables vary together, whereas correlation is used to determine when a change in one variable can result in a change in another. Both covariance and correlation measure linear relationships between variables. When the correlation coefficient is positive, an increase in one variable also results in an increase in the other. When the correlation coefficient is negative, the changes in the two variables are in opposite directions. When there is no relationship, there is no change in either."],
+         "context": [""]
+        },
+		 {"tag": "200",
+         "patterns": ["What is a Log Loss function and where is it used?","what is Log Loss function?"],
+         "responses": ["In classification techniques,  instead of predicting the actual classes, a measure called as LogLoss is used to predict the probabilities for an observation."],
+         "context": [""]
+        },
+		 {"tag": "201",
+         "patterns": ["What do you mean by Cross Entropy?"],
+         "responses": ["Cross Entropy essenitally is similar to log loss function used to measure the probabilities of an actual label. Generally, Log loss term is used in Binary classifications, whereas Cross Entropy is used for multiple classification."],
+         "context": [""]
+        },
+		 {"tag": "202",
+         "patterns": ["Given Decision Tree & Random Forest, which one do you think might create an overfitting problem and which one solves the overfitting problem?"],
+         "responses": ["Decision Tree has the tendency of overfitting because for the fact, it tries to build as much accurate model as possible by selecting the root node & the internal nodes based on the measure Gain. This Decision Tree will behave very well on the training data but might not generalize it's predictions on the test data. To overcome this problem, we have a reliable ensemble algorithm called as Random Forest which helps in tackling the overfitting problem by creating creating a lot of decision trees (built using a fewer input variables) and just not a single one. Finally, the results will be considered based on majority voting or an average of all the results."],
+         "context": [""]
+        },
+		 {"tag": "205",
+         "patterns": ["For Logiistic Regression, is it a good practice to decide on the goodness of the model based on just accuracy, or is there anything else we can look at?"],
+         "responses": ["Output of the Logistic Regression is great, you have multiple measures using which you can comment about the accuracy and reliability of the model. Like, probabilitites of parameters, Null Deviance, Residual Deviance, stepAIC (to compare mutliple models), confusion matrix, overall accuracy, Sensitivity (Recall), Specificity, ROC Curve, Lift Chart are the measures you might want to look at based on the context of the business objective."],
+         "context": [""]
+        },
+		 {"tag": "206",
+         "patterns": ["How does Multinomial Regression predicts the probabilities of class labels, given the fact that you have more than 2 class labels?"],
+         "responses": ["In a way, Multinomial Regression builds n-1 individual Logistic Regression models, here n is the number of class labels. Applying exponential on either sides of the the n-1 model outputs and then solving them gives us the individual probabilities for the n class labels. Once we get the probabilities we then classify observations as the class labels."],
+         "context": [""]
+        },
+		 {"tag": "207",
+         "patterns": ["Why is SVM called as a black box technique?"],
+         "responses": ["SVM is termed as a black box technique, as internally the algorithm applies complex transformations on the input variables based on the Kernel trick applied. Although, the math of these tranformations is not hidden but slightly complex. Becasue of this complexity, SVM is known as a black box technique."],
+         "context": [""]
+        },
+		 {"tag": "208",
+         "patterns": ["Why are Ensemble techniques more preferred than other classification models?"],
+         "responses": ["Firstly the ensemble techniques assure about the reliability of the accuracy. This however can also be achieved for non-ensemble techniques by employing various reliability techniques. One such popular technique is k-fold cross validation. Secondly, it's the way how intelligently the classifications are predicted in ensemble techniques."],
+         "context": [""]
+        },
+		 {"tag": "209",
+         "patterns": ["Which pre-processing steps can be considered before building a recommendation system?"],
+         "responses": ["Imputing the missing values, normalization, SVD or PCA or Clustering, similarity measures can be considered as the pre-processing steps before Recommendation Systems."],
+         "context": [""]
+        },
+		 {"tag": "210",
+         "patterns": ["What is the need of having Confidence and Lift Ratio, when you have the Support measure?"],
+         "responses": ["Support measure helps us in filtering out all the possible combination of rules which are expnential. Effect of Antecedent or Conseqent being a generalized product cannot be filtered out just by definig Support. Confidence helps in filtering out Antecedents being generalized products and Lift Ratio helps in filtering our Consequents being generalized ones."],
+         "context": [""]
+        },
+		 {"tag": "211",
+         "patterns": ["Are you aware of the algorithm which employs Affinity Analysis ?"],
+         "responses": ["Apriori is the algorithm which employs Affinity Analysis."],
+         "context": [""]
+        },
+		 {"tag": "212",
+         "patterns": ["What is User based collaborative filtering?"],
+         "responses": ["In User Based Collaborative Filtering, users act as rows and items as columns. Here we try to find the similarity among the users."],
+         "context": [""]
+        },
+		 {"tag": "213",
+         "patterns": ["What is Item based collaborative filtering?"],
+         "responses": ["In Item Based Collaborative Filtering, items act as rows and users as columns. Here we try to find the similarity among the items"],
+         "context": [""]
+        },
+		 {"tag": "214",
+         "patterns": ["How is Item based collaborative filtering different from  User based collaborative filtering?"],
+         "responses": ["When compared to Users, count of Items will be more. And in Item based collaborative filtering, we try to find similarity among the items which inturn makes the process computationally expensive. In addition to this, in User based collaborative filtering, by trying to find the similarity among the users we try to connect to the usre's taste. Whereas Item based collaborative filtering is somewhat similar to Market Basket Analysis where in we generalize the results."],
+         "context": [""]
+        },
+		 {"tag": "215",
+         "patterns": ["Can we normalize the data before employing Recommendation Systems?"],
+         "responses": ["It is appropriate to normalize the data when we have the values like ratings(1-5) as opposed to having values as purchased/not purchased or rated/not rated."],
+         "context": [""]
+        },
+		 {"tag": "216",
+         "patterns": ["What is the first thing that you need to look at when you are given a dataset?"],
+         "responses": ["The first check should be made on NA values. Check if there are any NA values present in the data or not. If present, then impute the NA values rather than deleting the observations having NAs."],
+         "context": [""]
+        },
+		{"tag": "217",
+         "patterns": ["What happens when missing values are not treated?"],
+         "responses": ["Missing data can reduce the power/fit of a model or can lead to a biased model making incorrect predictions or classifications."],
+         "context": [""]
+        },
+		{"tag": "218",
+         "patterns": ["What could be the reasons for the presence of NA values in the data?"],
+         "responses": ["Data Extraction and Data Collection are considered to be the major reasons for missing values."],
+         "context": [""]
+        },
+		{"tag": "219",
+         "patterns": ["What are the reasons for the NAs while collecting the data?"],
+         "responses": ["Missing completely at random, Missing at random, Missing that depends on unobserved predictors, Missing that depends on the missing value itself are the reasons for  NAs while collecting the data."],
+         "context": [""]
+        },
+		{"tag": "220",
+         "patterns": ["What are the various imputation techniques?"],
+         "responses": ["Listwise deletion, Pairwise deletion, Mean/Mode Substitution, Prediction model, KNN Imputation, Hot Deck Imputation, Maximum Likelihood, Multiple Imputation are the various imputation techniques."],
+         "context": [""]
+        },
+		{"tag": "221",
+         "patterns": ["Explain Pairwise Deletion imputation technique?"],
+         "responses": ["For each record, correlation between each combination of variables is computed. If the correlation is a junk value for two subsequent correlations, then the common value will be dropped from any computation."],
+         "context": [""]
+        },
+		{"tag": "222",
+         "patterns": ["How can we employ prediction modeling in imputation?"],
+         "responses": ["We divide dataset into two halves. One with no missing values (train data) and the other one with the missing values (test data). Variable with missing values is treated as the target variable. Next, we create a model to predict the target variable based on other attributes of the training data set."],
+         "context": [""]
+        },
+		{"tag": "223",
+         "patterns": ["What are the drawbacks of the prediction model imputation?"],
+         "responses": ["There are two drawbacks for this approach. First is that the model estimated values are usually more well-behaved than the true values. Second is that, if there is no relationships with attributes in the data set and the attribute with missing values, then the model will not be precise for estimating missing values."],
+         "context": [""]
+        },
+		{"tag": "224",
+         "patterns": ["Explain KNN Imputation"],
+         "responses": ["In this method, the missing values of an attribute are imputed using the given number of attributes that are most similar to the attribute whose values are missing. The similarity to the attribute is determined using a discrete function."],
+         "context": [""]
+        },
+		{"tag": "225",
+         "patterns": ["What are the advantages of using KNN imputation?"],
+         "responses": [" KNN can predict both qualitative and quantitaive attributes , Creation of predictive model for each attribute with missing data is not required,Attributes with multiple missing values can be easily treated ,Correlation structure of the data is take into consideration"],
+         "context": [""]
+        },
+		{"tag": "226",
+         "patterns": ["What are the disadvantages of using KNN imputation?"],
+         "responses": ["KNN imputation is a very time-consuming in analyzing large database. It searches throughout the dataset looking for most similar instances.Choice of K value is critical. Higher values of K would include attributes which are significantly different from what we need whereas lower value of K implies missing out of significant attributes."],
+         "context": [""]
+        },
+		{"tag": "227",
+         "patterns": ["Explain Hot Deck Imputation?"],
+         "responses": ["Algorithm traverses from top to bottom in a column, if any NA is found, it makes note of the other values of that record and traverses down till the end and goes up and comes back to the same position of NA. During this traverse it looks for for the exact matches of the record values it noted down and replace the value of NA with the exact matched record. But mostly, we did not find an exact match. If no exact match found, then we need to resort to other techniques like Mean/Mode imputation"],
+         "context": [""]
+        },
+		{"tag": "228",
+         "patterns": [" what is correct use of cross validation?"],
+         "responses": ["Cross-validation is also used to pick type of prediction function to be used."],
+         "context": [""]
+        },
+		{"tag": "231",
+         "patterns": ["what is Sum of weights of principal component in PCA analysis"],
+         "responses": ["1"],
+         "context": [""]
+        },
+		 {"tag": "232",
+         "patterns": ["Which prevents overfitting when we perform bagging?"],
+         "responses": ["Combining outputs of weak classifiers helps in avoid overfitting"],
+         "context": [""]
+        },
+		 {"tag": "233",
+         "patterns": ["what is feature transformation?"],
+         "responses": [": Feature transformation is nothing but feature engineering , which is to create new features with existing features to improve the models performance. Different feature engineering Techniques include:Imputation, Binning, Log transformation, Scaling, one- hot encoding."],
+         "context": [""]
+        },
+		 {"tag": "234",
+         "patterns": ["What is cross validation?"],
+         "responses": ["Cross validation is a model validation technique for evaluating how the outcomes of statistical analysis will generalize to an Independent dataset. Mainly used in backgrounds where the objective is forecast and one wants to estimate how accurately a model will accomplish in practice."],
+         "context": [""]
+        },
+		 {"tag": "235",
+         "patterns": ["different kernels functions in SVM ?"],
+         "responses": ["Linear Kernel,Polynomial kernel,Radial basis kernel,Sigmoid kernel"],
+         "context": [""]
+        },
+		 {"tag": "236",
+         "patterns": ["What is selection Bias?"],
+         "responses": ["Selection bias occurs when sample obtained is not representative of the population intended to be analysed."],
+         "context": [""]
+        },
+		 {"tag": "237",
+         "patterns": ["What is the difference between supervised and unsupervised machine learning?"],
+         "responses": ["Supervised machine learning requires training labelled data.Unsupervised machine learning doesn’t required labelled data."],
+         "context": [""]
+        },
+		 {"tag": "238",
+         "patterns": ["What are feature vectors?"],
+         "responses": [": A feature vector is an n-dimensional vector of the numerical features that represent some object. In machine learning, feature vectors are used to represent numeric or symbolic characteristics, it is called features."],
+         "context": [""]
+        },
+		 {"tag": "239",
+         "patterns": ["What is root cause analysis?"],
+         "responses": ["Root cause analysis was initially developed to analyze industrial accidents but is now widely used in different areas. It is a problem-solving technique used for isolating the root causes of mistakes or problems. A factor is called a root cause if it is a deduction from the problem-fault-sequence averts the final undesirable event from reoccurring."],
+         "context": [""]
+        },
+		 {"tag": "240",
+         "patterns": ["What are Recommender Systems?"],
+         "responses": ["Recommender systems are a subclass of information filtering systems that are meant to predict the preferences or ratings(interest) that a user would give to a product."],
+         "context": [""]
+        },
+		 {"tag": "242",
+         "patterns": ["What is the goal of A/B Testing?"],
+         "responses": ["This is a statistical hypothesis testing for randomized experiments with two variables(dimensions), A and B. The objective of A/B testing is to detect any changes to maximize or increase the outcome of a strategy"],
+         "context": [""]
+        },
+		{"tag": "243",
+         "patterns": ["What are confounding variables?"],
+         "responses": [": These are extraneous variables in a statistical model that correlate directly or inversely with both the dependent and the independent variable. The estimate fails to account for the confounding factor."],
+         "context": [""]
+        },
+		{"tag": "244",
+         "patterns": ["Explain selective bias?"],
+         "responses": ["Selection bias is a problematic situation in which error is introduced due to a non-random population sample."],
+         "context": [""]
+        },
+		{"tag": "245",
+         "patterns": ["How different is a mean value different from expected value?"],
+         "responses": ["Mean and expected values are similar but they are used in different contexts. While expected values are usually referred to in a random variable context, mean values will be referred to in the contexts of the sample population or probability distribution."],
+         "context": [""]
+        },
+		{"tag": "246",
+         "patterns": ["How do you find the correlation between a categorical variable and a continuous variable?"],
+         "responses": ["Yes, It is possible to find the correlation between a categorical variable and a continuous variable using the analysis of covariance technique."],
+         "context": [""]
+        },
+		{"tag": "249",
+         "patterns": ["What is the output of data()?"],
+         "responses": ["data() gives a list of all inbuilt datasets in R."],
+         "context": [""]
+        },
+		{"tag": "253",
+         "patterns": ["The alpha value for a standard normal distribution data having acceptable probability in a range of values [-1 to +1]"],
+         "responses": ["0.318 (we have to calculate the alpha region for a standard normal distribution with z values (-1, +1)) "],
+         "context": [""]
+        },
+		{"tag": "254",
+         "patterns": ["Dependent variable is sometimes called as "],
+         "responses": ["response variable,predicted variable,measured variable,output variable "],
+         "context": [""]
+        },
+		{"tag": "255",
+         "patterns": ["The method that KNN adopts to label a new test point is"],
+         "responses": ["Majority voting method"],
+         "context": [""]
+        },
+		 {"tag": "256",
+         "patterns": ["possible value of the correlation coefficient?"],
+         "responses": ["the correlation coefficient can have values from a range of -1 to +1"],
+         "context": [""]
+        },
+		 {"tag": "260",
+         "patterns": ["In the ANN, the layers between the input and output layers are known as?"],
+         "responses": ["Hidden Layer."],
+         "context": [""]
+        },
+		 {"tag": "261",
+         "patterns": ["Linear regression and logistics regression can be thought of as special cases of the simple neural network that have only:"],
+         "responses": ["Input layer and output layer"],
+         "context": [""]
+        },
+		 {"tag": "262",
+         "patterns": ["In a feed-forward network, the connections between input and output layers are "],
+         "responses": ["Unidirectional"],
+         "context": [""]
+        },
+		 {"tag": "264",
+         "patterns": ["What is logistic regression"],
+         "responses": ["Logistic regression is a technique to predict a binary dependent variable. The logistic regression has a sigmoid curve nature where the output value either is 0 or 1"],
+         "context": [""]
+        }
+   ]
+}
