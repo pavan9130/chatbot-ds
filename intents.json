@@ -1,7 +1,877 @@
 {
 "intents": 
 [
-        {"tag": "greeting",
+  {"tag": "1",
+       "patterns": ["Functions to find row & column count in R?"],
+       "responses": ["dim() function or nrow() & col() can be used to find row & column count"],
+       "context": [""]
+  },
+  {"tag": "2",
+       "patterns": ["What is the function to compute the accuracy of a classifier?","Function to compute accuracy of classifier"],
+       "responses": ["mean() function can be used to compute the accuracy. Within parenthesis actual labels have to         compared with predicted labels"],
+       "context": [""]
+  },
+  {"tag": "3",
+        "patterns": ["What is Bayes' Theorem?","Bayes Theorem"],
+        "responses": ["Bayes Theorem finds the probability of an event occurring given the probability of another event that has already occurred. Mathematically it is given as P(A|B) = [P(B|A)P(A)]/P(B) where A & B are events.  P(A|B) called Posterior Probability is the probability of event A(response) given that B(independent) has already occurred. P(B|A) is the likelihood of the training data i.e., probability of event B(independent) given that A(response) has already occurred. P(A) is the probability of the response variable and P(B) is the probability of the training data or evidence.","ssdsdsd"],
+        "context": [""]
+   },
+   {"tag": "4",
+    "patterns": ["What is the assumption of the Naive Bayes Classifier?","assuption of the naive bayes classifier?"],
+    "responses": ["The fundamental assumption is that each independent variable independently and equally contributes to the outcome"],
+    "context": [""]
+   },
+   {"tag": "5",
+    "patterns": ["What is SVM?","SVM?"],
+    "responses": ["Here we plot each data point in n-dimensional space with the value of each dimension being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiate the classes very well"],
+    "context": [""]
+   },
+   {"tag": "6",
+    "patterns": ["What are the tuning parameters of SVM?","tuning parameter of SVM?"],
+    "responses": ["Kernel, Regularization, Gamma and Margin are the tuning parameters of SVM"],
+    "context": [""]
+   },
+   {"tag": "7",
+    "patterns": ["Explain Kernel in SVM?","What is kernel in SVM?","Kernel in SVM?"],
+    "responses": ["Kernel tricks are nothing but the transformations applied on input variables that separate non-separable data to separable data. There are 9 different kernel tricks. Examples are Linear, RBF, Polynomial, etc."],
+    "context": [""]
+   },
+   {"tag": "8",
+    "patterns": ["Is there a need to convert categorical variables into numeric in SVM? If yes, explain."],
+    "responses": ["All the categorical variables have to be converted to numeric by creating dummy variables, as all the data points have to be plotted on n-dimensional space, in addition to this we have tuning parameters like Kernel, Regularization, Gamma & Margin which are mathematical computations that require numeric variables. This is an assumption of SVM."],
+    "context": [""]
+   },
+   {"tag": "9",
+    "patterns": ["What is Regularization in SVM?","Regularization in SVM?"],
+    "responses": ["The value of the Regularization parameter tells the training model as to how much it can avoid misclassifying each training observation."],
+    "context": [""]
+   },
+   {"tag": "10",
+    "patterns": ["What is the Gamma parameter in SVM?"],
+    "responses": ["Gamma is the kernel coefficient in the kernel tricks RBF, Polynomial, & Sigmoid. Higher values of Gamma will make the model more complex and overfits the model."],
+    "context": [""]
+   },
+   {"tag": "11",
+    "patterns": ["What do you mean by Margin in SVM?","Margin in SVM?"],
+    "responses": ["Margin is the separation line to the closest class datapoints. Larger the margin width, better is the classification done. But before even achieving maximum margin, the objective of te algorithm is to correctly classify datapoints."],
+    "context": [""]
+   },
+   {"tag": "12",
+    "patterns": ["What is the SVM package used for SVM in R?"],
+    "responses": ["kernlab is the package used in R for implementing SVM in R."],
+    "context": [""]
+   },
+   {"tag": "13",
+    "patterns": ["What is the function name to implement SVM in R?"],
+    "responses": ["ksvm is the function in R to implement SVM in R."],
+    "context": [""]
+   },
+   {"tag": "14",
+    "patterns": ["What is a decision tree?"],
+    "responses": ["Decision Tree is a supervised machine learning algorithm used for classification and regression analysis. It is a tree-like structure in which an internal node represents a test on an attribute, each branch represents the outcome of the test and each leaf node represents class label."],
+    "context": [""]
+   },
+   {"tag": "15",
+    "patterns": ["What are the rules in a decision tree?"],
+    "responses": ["A path from the root node to a leaf node represents classification rules"],
+    "context": [""]
+   },
+   {"tag": "16",
+    "patterns": ["Explain different types of nodes in nodes in the decision tree and how are they selected?"],
+    "responses": ["We have Root Node, Internal Node, Leaf Node in a decision tree. Decision Tree starts at the Root Node, this is the first node of the decision tree. Data set is split based on Root Node, again nodes are selected to further split the already splitted data. This process of splitting the data goes on till we get leaf nodes, which are nothing but the classification labels. The process of selecting Root Nodes and Internal Nodes is done using the statistical measure called as Gain"],
+    "context": [""]
+   },
+   {"tag": "17",
+    "patterns": ["What do you mean by impurity in Decision Tree?","impurity in Decision Tree?"],
+    "responses": ["We say a data set is pure or homogenous if all of it's class labels is the same and impure or heterogenous if the class labels are different. Entropy or Gini Index or Classification Error can be used to measure the impurity of the data set."],
+    "context": [""]
+   },
+   {"tag": "18",
+    "patterns": ["What is the advantage of Pruning?"],
+    "responses": ["Pruning reduces the complexity of the model which in turn reduces the overfitting problem of Decision Tree. There are two strategies in Pruning. Propruning - discard unreliable parts from the fully grown tree, Prepruning - stop growing a branch when the information becomes unreliable. Post pruning is the preferred one."],
+    "context": [""]
+   },
+   {"tag": "19",
+    "patterns": ["What is the difference between Entropy and Information Gain?"],
+    "responses": ["Entropy is a probabilistic measure of uncertainty or impurity whereas Information Gain is the reduction of this uncertainty measure."],
+    "context": [""]
+   },
+   {"tag": "20",
+    "patterns": ["Explain the expression of Gain (of any column)?"],
+    "responses": ["Gain for any column is calculated by differencing Information Gain of a dataset with respect to a variable from the Information Gain of the entire dataset i.e., Gain(Age) = Info(D) - Info(D wrt Age)"],
+    "context": [""]
+   },
+   {"tag": "21",
+    "patterns": ["What is the package required to implement Decision Tree in R?"],
+    "responses": ["C50 and tree packages can be used to implement a decision tree algorithm in R."],
+    "context": [""]
+   },
+   {"tag": "22",
+    "patterns": ["What is a Random Forest?"],
+    "responses": ["Random Forest is an Ensemble Classifier. As opposed to building a single decision tree, random forest builds many decision trees and combines the output of all the decision trees to give a stable output."],
+    "context": [""]
+   },
+   {"tag": "23",
+    "patterns": ["How does Random Forest adds randomness and build a better model?"],
+    "responses": ["Instead of searching for the most important feature while splitting a node, it searches for the best feature among a random subset of features. This results in a wide diversity that generally results in a better model. Additional randomness can be added by using random thresholds for each feature rather than searching for the best possible thresholds (like a normal decision tree does)."],
+    "context": [""]
+   },
+   {"tag": "24",
+    "patterns": ["What is the R package to employ Random Forest in R?"],
+    "responses": ["RandomForest is the package to employ Random Forest in R"],
+    "context": [""]
+   },
+   {"tag": "25",
+    "patterns": ["What are the pros of using Random Forest?"],
+    "responses": ["Random Forest won't overfit the model, it is unexcelled in reliable accuracy, works very well on large data sets, can handle thousands of input variables without deletion, outputs significance of input variables, handles outliers and missing values very well"],
+    "context": [""]
+   },
+   {"tag": "26",
+    "patterns": ["What is the limitation of Random Forest?"],
+    "responses": ["The main limitation of Random Forest is that a large number of trees can make the algorithm to slow and ineffective for real-time predictions. In most real-world applications the random forest algorithm is fast enough, but there can certainly be situations where run-time performance is important and other approaches would be preferred."],
+    "context": [""]
+   },
+   {"tag": "27",
+    "patterns": ["What is a Neural Network?"],
+    "responses": ["Neural Network is a supervised machine learning algorithm that is inspired by the human nervous system and it replicates the similar to how the human brain is trained. It consists of Input Layers, Hidden Layers, & Output Layers."],
+    "context": [""]
+   },
+   {"tag": "28",
+    "patterns": ["What are the various types of Neural Networks?"],
+    "responses": ["Artificial Neural Network, Recurrent Neural Networks, Convolutional Neural Networks, Boltzmann Machine Networks, Hopfield Networks are examples of the Neural Networks. There are a few other types as well."],
+    "context": [""]
+   },
+   {"tag": "29",
+    "patterns": ["What is the use of activation functions in neural network?"],
+    "responses": ["The activation function is used to convert an input signal of a node in an A-NN to an output signal. That output signal now is used as an input in the next layer in the stack."],
+    "context": [""]
+   },
+   {"tag": "30",
+    "patterns": ["What are the different types of activation functions in neural network?"],
+    "responses": ["Sigmoid or Logistic, Tanh or Hyperbolic tangent, ReLu or Rectified Linear units are examples of activation functions in neural network"],
+    "context": [""]
+   },
+   {"tag": "31",
+    "patterns": ["What is the package name to implement a neural network in R?"],
+    "responses": ["neuralnet package can be used to implement a neural network in R"],
+    "context": [""]
+   },
+   {"tag": "32",
+    "patterns": ["What is logistic regression? Or State an example when you have used logistic regression recently?"],
+    "responses": ["Logistic Regression often referred to as the logit model is a technique to predict the binary outcome from a linear combination of predictor variables. For example, if you want to predict whether a particular political leader will win the election or not. In this case, the outcome of prediction is binary i.e. 0 or 1 (Win/Lose). The predictor variables here would be the amount of money spent on election campaigning of a particular candidate, the amount of time spent in campaigning, etc."],
+    "context": [""]
+   },
+   {"tag": "33",
+    "patterns": ["What are Recommender Systems?"],
+    "responses": ["A subclass of information filtering systems that are meant to predict the preferences or ratings that a user would give to a product. Recommender systems are widely used in movies, news, research articles, products, social tags, music, etc."],
+    "context": [""]
+   },
+   {"tag": "34",
+    "patterns": ["Why data cleaning plays a vital role in analysis?"],
+    "responses": ["Cleaning data from multiple sources to transform it into a format that data analysts or data scientists can work with is a cumbersome process because - as the number of data sources increases, the time take to clean the data increases exponentially due to the number of sources and the volume of data generated in these sources. It might take up to 80% of the time for just cleaning data making it a critical part of analysis task."],
+    "context": [""]
+   },
+   {"tag": "35",
+    "patterns": ["What is the use of cross-validation?"],
+    "responses": ["Selecting variables to include in a model,Comparing predictors,Selecting parameters in the prediction function,Cross-validation is also used to pick type of prediction function to be used."],
+    "context": [""]
+   },
+   {"tag": "36",
+    "patterns": ["What is prevent from overfitting when we perform bagging?"],
+    "responses": ["The presence of over-training  (which leads to overfitting)  is not generally a  problem with weak classifiers.  For example, in decision trees with only one node (the root node), there is no real scope for overfitting.  This helps the classifier which combines the outputs of weak classifiers in avoiding overfitting."],
+    "context": [""]
+   },
+   {"tag": "37",
+    "patterns": ["what is feature transformation"],
+    "responses": ["Feature transformation is nothing but feature engineering, which is to create new features with existing features to improve the model's performance. Different feature engineering Techniques include:Imputation, Binning, Log transformation, Scaling, one-hot encoding."],
+    "context": [""]
+   },
+   {"tag": "38",
+    "patterns": ["What are the different kernel's functions in SVM?"],
+    "responses": ["Linear Kernel,Polynomial kernel,Radial basis kernel.Sigmoid kernel"],
+    "context": [""]
+   },
+   {"tag": "39",
+    "patterns": ["What are the different kernel's functions in SVM?"],
+    "responses": ["A feature vector is an n-dimensional vector of the numerical features that represent some object. In machine learning, feature vectors are used to represent numeric or symbolic characteristics, it is called features."],
+    "context": [""]
+   },
+   {"tag": "40",
+    "patterns": ["What is root cause analysis?"],
+    "responses": ["Root cause analysis was initially developed to analyze industrial accidents but is now widely used in different areas. It is a problem-solving technique used for isolating the root causes of mistakes or problems. A factor is called a root cause if it is a deduction from the problem-fault-sequence averts the final undesirable event from reoccurring."],
+    "context": [""]
+   },
+   {"tag": "41",
+    "patterns": ["Differentiate between univariate, bivariate and multivariate analysis."],
+    "responses": ["These are descriptive statistical analysis techniques which can be differentiated based on the number of variables involved at a given point of time. For example, the pie charts of sales based on territory involve only one variable and can be referred to as univariate analysis.If the analysis attempts to understand the difference between 2 variables at time as in a scatterplot, then it is referred to as bivariate analysis. For example, analysing the volume of sale and a spending can be considered as an example of bivariate analysis.Analysis that deals with the study of more than two variables to understand the effect of variables on the responses is referred to as multivariate analysis."],
+    "context": [""]
+   },
+   {"tag": "42",
+    "patterns": ["What is Machine Learning?"],
+    "responses": ["Machine learning is the science of getting computers to act without being explicitly programmed. Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. It is so widespread that unknowingly we use it many a times in our daily life."],
+    "context": [""]
+   },
+   {"tag": "43",
+    "patterns": ["What is Supervised Machine Learning?"],
+    "responses": ["Supervised Machine Learning will be employed for the problem statements where in output variable (Nominal) of interest can be either classified or predicted.Examples: KNN, Naive Bayes, SVM, Decision Tree, Random Forest, Neural Network"],
+    "context": [""]
+   },
+   {"tag": "44",
+    "patterns": ["What is Unsupervised Machine Learning?"],
+    "responses": ["In this category of Machine Learning, there won't be any output variable to be either predicted or classified. Instead the algorithm understands the patterns in the data.Examples: Segmentation, PCA, SVD, Market Basket Analysis, Recommender Systems."],
+    "context": [""]
+   },
+   {"tag": "45",
+    "patterns": ["What is Classification Modeling?"],
+    "responses": ["Classification Models are employed when the observations have to be classified in categories and not predicted.Examples being Cancerous and Non-cancerous tumor (2 categories),  Bus, Rail, Car, Carpool (>2 categories)"],
+    "context": [""]
+   },
+   {"tag": "46",
+    "patterns": ["Examples of Unsupervised Machine Learning"],
+    "responses": ["Segmentation, PCA, SVD, Market Basket Analysis, Recommender Systems"],
+    "context": [""]
+   },
+   {"tag": "67",
+	 "patterns": ["Example of clustering ?"],
+	 "responses": ["Using variables like income, education,  profession, age, number of children, etc you come with different clusters and each cluster has people with similar socio-economic criteria"],
+	 "context" : [""]
+	},
+	{"tag": "68",
+	 "patterns": ["Is normalization of data required before applying clustering? ?"],
+	 "responses": ["It would be better if we employ clustering on normalized data as you will get different results for with and without normalization"],
+	 "context" : [""]
+	},
+	{"tag": "69",
+	 "patterns": ["What is the range of Z transformed variable ?"],
+	 "responses": ["Theoretically it will be between - infinity to + inifinity but normally you have values between -3 to +3"],
+	 "context" : [""]
+	},
+	{"tag": "70",
+	 "patterns": ["What is the range of variable when ((x - min(X))/(max(X) - min(X)) normalization technique is employed ?"],
+	 "responses": ["0 to 1 is the range for this normalizaion technique"],
+	 "context" : [""]
+	},
+	{"tag": "71",
+	 "patterns": ["What does summary() command gives ?"],
+	 "responses": ["summary() command gives the distribution for numerical variables and proportion of observations for factor variables"],
+	 "context" : [""]
+	},
+	{"tag": "72",
+	 "patterns": ["Packages to read excel files in R ?"],
+	 "responses": ["readxl or xlsx packages can be used to read excel files in R"],
+	 "context" : [""]
+	},
+	{"tag": "73",
+	 "patterns": ["What are linkages in hierarchical clustering ?"],
+	 "responses": ["Linkage is the criteria based on which distances between two clusters is computed."],
+	 "context" : [""]
+	},
+	{"tag": "74",
+	 "patterns": ["How do we decide upon the number of clusters in hierarchial clustering ?"],
+	 "responses":["In Hierarchial Clustering number of clusters will be decided only after looking at the dendrogram."],
+	 "context" : [""]
+	},
+	{"tag": "75",
+	 "patterns": ["What is the use of set.seed() function ?"],
+	 "responses":["set.seed() function is to reproduce same results if the code is re-run again. Any number can be given within the paranthesis"],
+	 "context" : [""]
+	},
+	{"tag": "76",
+	 "patterns": ["Why is KNN called as non-parametric algorithm ?"],
+	 "responses":["KNN makes no assumptions about the underlying data (unlike other algorithms, eg. Linear Regression"],
+	 "context" : [""]
+	},
+	{"tag": "77",
+	 "patterns": ["Why is KNN called as Lazy Algorithm ?"],
+	 "responses":["There is no or minimal training phase because of which training phase is pretty fast. Here the training data is used during the testing phase."],
+	 "context" : [""]
+	},
+	{"tag": "78",
+	 "patterns": ["How do we choose the value of K in KNN algorithm ?"],
+	 "responses":["K value can be selected using sqrt(no. of obs/2), kselection package, scree plot, k fold cross validation"],
+	 "context" : [""]
+	},
+	{"tag": "79",
+	 "patterns": ["Function in R to employ KNN ?"],
+	 "responses":["knn() can be used from the class package"],
+	 "context" : [""]
+	},
+	{"tag": "80",
+	 "patterns": ["What is the r function to know the number of observations for the levels of a variable ?"],
+	 "responses":["table() is the r function. It can be also be employed on any variable but it makes sense to employ on a factor variable."],
+	 "context" : [""]
+	},
+	{"tag": "81",
+	 "patterns": ["What is the r function to know the persentae of observations for the levels of a variable ?"],
+	 "responses":["prop.table() employed on top of table() function i.e., prop.table(table()) is the r function. It can be also be employed on any variable but it makes sense to employ on a factor variable."],
+	 "context" : [""]
+	},
+	{"tag": "82",
+	 "patterns": ["Difference between lapply & sapply function ?"],
+	 "responses":["lapply returns the ouput as a list whereas sapply returns the ouput as a vector, matrix or array."],
+	 "context" : [""]
+	},
+	{"tag": "83",
+	 "patterns": ["Can we represent the output of a classifer having more than two levels using a confusion matrix ?"],
+	 "responses":["We cannot use confusion matix when we have more than two levels in the output variable. Instead, we can use crosstable() function from gmodels package"],
+	 "context" : [""]
+	},
+	{"tag": "84",
+	 "patterns": ["What is Probability ?"],
+	 "responses":["Probability is given by Number of interested events/Total number of events"],
+	 "context" : [""]
+	},
+	{"tag": "85",
+	 "patterns": ["What is Joint probability ?"],
+	 "responses":["It is the probability of two events occuring at the same time. Classical example is probability of an email being spam wih the word lottery in it.Here the events are email being spam and email having the word lottery"],
+	 "context" : [""]
+	},
+	{"tag": "86",
+	 "patterns": ["What is the function to perform simple random sampling ?"],
+	 "responses":["sample() is the function in R to employ Simple Random Sampling"],
+	 "context" : [""]
+	},
+	{"tag": "87",
+	 "patterns": ["Functions to find row & column count in R ?"],
+	 "responses":["mean() function can be used to compute the accuracy. Within parenthesis actual labels have to compared with predicted labels"],
+	 "context" : [""]
+	},
+	{"tag": "88",
+	 "patterns": ["What is the function to compute accuracy of a classifier ?"],
+	 "responses":["dim() function or nrow() & col() can be used to find row & column count"],
+	 "context" : [""]
+	},
+	{"tag": "89",
+	 "patterns": ["What is Bayes' Theorem ?"],
+	 "responses":["Bayes’ Theorem finds the probability of an event occurring given the probability of another event that has already occurred. Mathematically it is given as P(A|B) = [P(B|A)P(A)]/P(B) where A & B are events.  P(A|B) called as Posterior Probability, is the probability of event A(response) given that B(independent) has already occured. P(B|A) is the likelihood of the training data i.e., probability of event B(indpendent) given that A(response) has already occured. P(A) is the probability of the response variable and P(B) is the probability of the training data or evidence"],
+	 "context" : [""]
+	},
+	{"tag": "90",
+	 "patterns": ["What is the assumption of Naive Bayes Classifier ?"],
+	 "responses":["The fundamental assumption is that each indepedent variable independently and equally contributes to the outcome."],
+	 "context" : [""]
+	},
+	{"tag": "91",
+	 "patterns": ["What is SVM ?"],
+	 "responses":["Here we plot each data point in n-dimensional space with the value of each dimension being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiate the classes very well"],
+	 "context" : [""]
+	},
+	{"tag": "92",
+	 "patterns": ["What are the tuning parameters of SVM ?"],
+	 "responses":["Kernel, Regularization, Gamma and Margin are the tuning paramers of SVM"],
+	 "context" : [""]
+	},
+	{"tag": "93",
+	 "patterns": ["Explain Kernel in SVM ?"],
+	 "responses":["Kernel tricks are nothing but the transformations applied on input variables which separate non-separable data to separable data. There are 9 different kernel tricks. Examples are Linear, RBF, Polynomial, etc."],
+	 "context" : [""]
+	},
+	{"tag": "94",
+	 "patterns": ["Is there a need to convert categorical variables into numeric in SVM? If yes, explain ?"],
+	 "responses":["All the categorical variables have to be converted to numeric by creating dummy variables, as all the data points have to be plotted on n dimensional space, in addition to this we have tuning paramteters like Kernel, Regularization, Gamma & Margin which are mathematical computations that require numeric variables. This is an assumpton of SVM."],
+	 "context" : [""]
+	},
+	{"tag": "95",
+	 "patterns": ["What is Regularization in SVM ?"],
+	 "responses":["The value of Regularization parameter tells the training model as to how much it can avoid misclassifying each training observation"],
+	 "context" : [""]
+	},
+	{"tag": "96",
+	 "patterns": ["What is Gamma parameter in SVM ?"],
+	 "responses":["Gamma is the kernel coefficient in the kernel tricks RBF, Polynomial, & Sigmoid. Higher values of Gamma will make the model more complex and overfits the model."],
+	 "context" : [""]
+	},
+	{"tag": "97",
+	 "patterns": ["What do you mean by Margin in SVM ?"],
+	 "responses":["Margin is the separation line to the closest class datapoints. Larger the margin width, better is the classification done. But before even achieving maximum margin, objective of te algorithm is to correctly classify datapoints."],
+	 "context" : [""]
+	},
+	{"tag": "98",
+	 "patterns": ["What is the SVM package used for SVM in R ?"],
+	 "responses":["kernlab is the package used in R for implementing SVM in R"],
+	 "context" : [""]
+	},
+	{"tag": "99",
+	 "patterns": ["What is the function name to implement SVM in R ?"],
+	 "responses":["ksvm is the function in R to implement SVM in R"],
+	 "context" : [""]
+	},
+	{"tag": "100",
+	 "patterns": ["What is a decision tree ?"],
+	 "responses":["Decision Tree is a superised machine learning algorithm used for classification and regression analysis. It is a tree-like structure in which internal node represents test on an attribute, each branch represents outcome of test and each leafe node represents class label."],
+	 "context" : [""]
+	},
+	{"tag": "101",
+	 "patterns": ["What are rules in decision tree ?"],
+	 "responses":["A path from root node to leaf node represents classification rules."],
+	 "context" : [""]
+	},
+	{"tag": "102",
+	 "patterns": ["Explain different types of nodes in nodes in decision tree and how are they selected. ?"],
+	 "responses":["We have Root Node, Internal Node, Leaf Node in a decision tree. Decision Tree starts at the Root Node, this is the first node of the decision tree. Data set is split based on Root Node, again nodes are selected to further split the already splitted data. This process of splitting the data goes on till we get leaf nodes, which are nothing but the classification labels. The process of selecting Root Nodes and Internal Nodes is done using the statistical measure called as Gain"],
+	 "context" : [""]
+	},
+	{"tag": "103",
+	 "patterns": ["What do you mean by impurity in Decision Tree ?"],
+	 "responses":["We say a data set is pure or homoegenous if all of it's class labels is the same and impure or hetergenous if the class labels are different. Entropy or Gini Index or Classification Error can be used to measure impurity of the data set."],
+	 "context" : [""]
+	},
+	{"tag": "104",
+	 "patterns": ["What is Pruning in Decision Tree ?"],
+	 "responses":["The process of removal of sub nodes which contribute less power to the decision tree model is called as Pruning."],
+	 "context" : [""]
+	},
+	{"tag": "105",
+	 "patterns": ["What is the advantage of Pruning ?"],
+	 "responses":["Pruning reduces the complexity of the model which in turn reduces overfitting problem of Decision Tree. There are two strategies in Pruning. Propruning - discard unreliable parts from the fully grown tree, Prepruning - stop growing a branch when the information becomes unreliable. Postpruning is the preferred one."],
+	 "context" : [""]
+	},
+	{"tag": "106",
+	 "patterns": ["What is the difference between Entropy and Information Gain ?"],
+	 "responses":["Entropy is a probabilistic measure of uncertainity or impurity whereas Information Gain is the reduction of this uncertainity measure"],
+	 "context" : [""]
+	},
+	{"tag": "107",
+	 "patterns": ["Explain the expression of Gain (of any column) ?"],
+	 "responses":["Gain for any column is calculated by differencing Information Gain of a dataset with respect to a variable from the Information Gain of the entire dataset i.e., Gain(Age) = Info(D) - Info(D wrt Age)"],
+	 "context" : [""]
+	},
+	{"tag": "108",
+	 "patterns": ["What is the package required to implement Decision Tree in R ?"],
+	 "responses":["C50 and tree packages can be used to implement a decision tree algorithm in R."],
+	 "context" : [""]
+	},
+	{"tag": "109",
+	 "patterns": ["What is Random Forest ?"],
+	 "responses":["Random Forest is an Ensemble Classifer. As opposed to building a single decision tree, random forest builds many decision trees and combines the output of all the decision trees to give a stable output."],
+	 "context" : [""]
+	},
+	{"tag": "110",
+	 "patterns": ["How does Random Forest adds randomness and build a better model ?"],
+	 "responses":["Instead of searching for the most important feature while splitting a node, it searches for the best feature among a random subset of features. This results in a wide diversity that generally results in a better model. Additional randomness can be added by using random thresholds for each feature rather than searching for the best possible thresholds (like a normal decision tree does)."],
+	 "context" : [""]
+	},
+	{"tag": "111",
+	 "patterns": ["What is the R package to employ Random Forest in R ?"],
+	 "responses":["randomForest is the package to employ Random Forest in R."],
+	 "context" : [""]
+	},
+	{"tag": "112",
+	 "patterns": ["What are the pros of using Random Forest ?"],
+	 "responses":["Random Forest won't overfit the model, it is unexcelled in reliable accuracy, works very well on large data sets, can handle thousands of input variables without deletion, outputs significance of input variables, handles outliers and missing values very well"],
+	 "context" : [""]
+	},
+	{"tag": "113",
+	 "patterns": ["What is a Neural Network ?"],
+	 "responses":["Neural Network is a supervised machine learning algorithm which is inspired by human nervous system and it replicates the similar to how human brain is trained. It consists of Input Layers, Hidden Layers, & Output Layers."],
+	 "context" : [""]
+	},
+	{"tag": "114",
+	 "patterns": ["What are the various types of Neural Networks ?"],
+	 "responses":["Neural Network is a supervised machine learning algorithm which is inspired by human nervous system and it replicates the similar to how human brain is trained. It consists of Input Layers, Hidden Layers, & Output Layers"],
+	 "context" : [""]
+	},
+	{"tag": "115",
+	 "patterns": ["What is the use of activation functions in neural network ?"],
+	 "responses":["Activation function is used to convert a input signal of a node in a A-NN to an output signal. That output signal now is used as a input in the next layer in the stack."],
+	 "context" : [""]
+	},
+	{"tag": "116",
+	 "patterns": ["What are the different types of activation functions in neural network ?"],
+	 "responses":["Sigmoid or Logistic, Tanh or Hyperbolic tangent, ReLu or Rectified Linear units are examples of activation functions in neural network"],
+	 "context" : [""]
+	},
+	{"tag": "117",
+	 "patterns": ["What is the package name to implement neural network in R ?"],
+	 "responses":["Sneuralnet package can be used to implement neural network in R"],
+	 "context" : [""]
+	},
+	{"tag": "118",
+	 "patterns": ["What is a probability distribution ?"],
+	 "responses":["A probability distribution is a function that provides the probabilities of occurrence of different possible outcomes in an experiment. In a probability distribution, random variable is plotted on X axis and associated probabilities are plotted on Y axis"],
+	 "context" : [""]
+	},
+	{"tag": "119",
+	 "patterns": ["What are the classifications of probability distributions ?"],
+	 "responses":["Probability distributions are categorized in two, Discrete and Continuous probability distributions. In discrete probability distribution underlying random variable is discrete whereas in conitnusous probability distribution underlying random variable is continuous"],
+	 "context" : [""]
+	},
+	{"tag": "120",
+	 "patterns": ["What do you mean by discrete random variable ?"],
+	 "responses":["A discrete random variable is a random variable that has countable values, such as a list of non-negative integers."],
+	 "context" : [""]
+	},
+	{"tag": "121",
+	 "patterns": ["Examples of discrete random variables ?"],
+	 "responses":["Number of students present, number of red marbles in a jar, number of heads when flipping three coins, students' grade level are few of the examples of discrete random variables"],
+	 "context" : [""]
+	},
+	{"tag": "122",
+	 "patterns": ["What do you mean by continuous random variable ?"],
+	 "responses":["A continuous random variable is a random variable with a set of possible values (known as the range) that is infinite and uncountable"],
+	 "context" : [""]
+	},
+	{"tag": "123",
+	 "patterns": ["Examples of continuous random variables ?"],
+	 "responses":["Height of students in class, weight of students in class, time it takes to get to school, distance traveled between classes are few of the examples of continuous random variables"],
+	 "context" : [""]
+	},
+	{"tag": "124",
+	 "patterns": ["What do you mean by Expected Value ?"],
+	 "responses":["Expected value (EV), also known as mean value, is the expected outcome of a given experiment, calculated as the weighted average of all possible values of a random variable based on their probabilities."], 
+	 "context" : [""]
+	},
+	{"tag": "125",
+	 "patterns": ["What do you mean by Data Type ?"],
+	 "responses":["A data type, in programming, is a classification that specifies which type of value a variable has and what type of mathematical, relational or logical operations can be applied to it without causing an error."],
+	 "context" : [""]
+	},
+	{"tag": "126",
+	 "patterns": ["What are the classifications of data types in Statistics ?"],
+	 "responses":["Qualitative and Quantitative are the broader classifications in R, however these are further classified into Nominal, Ordinal, Interval, & Ratio data types."],
+	 "context" : [""]
+	},
+	{"tag": "127",
+	 "patterns": ["What is the difference between a nominal and an ordinal data type ?"],
+	 "responses":["A nominal data type merely is a name or a label. Languages spoken by a person, jersey numbers of football players are examples of Nominal data type. Whereas, on top of being a name or a label, Ordinal data type has some natural ordering associated with it. Shirt sizes, Likert scale rating, Ranks of a competition, Educational background of a person are examples of Ordinal data type"],
+	 "context" : [""]
+	},
+	{"tag": "128",
+	 "patterns": ["How is Interval data type different from Ratio ?"],
+	 "responses":["Interval scales are numeric scales in which we know not only the order, but also the exact differences between the values, but the problem with the problem with interval scales is that they don’t have a true zero. Temperature and Dates are examples of Interval data type. Whereas Ratio data type tell us about the order, exact value between units, and they also have an absolute zero. Heights & Weights of people, length of a object"],
+	 "context" : [""]
+	},
+	{"tag": "129",
+	 "patterns": ["Why Data Types are important ?"],
+	 "responses":["Any statistical method, be it descriptive, predictive or prescriptive can be employed only based on the data type of the variable. Incorrect identification of data types leads to incorrect modeling which in turn leads to incorrect solution"],
+	 "context" : [""]
+	},
+	{"tag":"133",
+	 "patterns": ["What do you mean by an Absolute Zero ?"],
+	 "responses":["Absolute zero means true absence of a value. We do not have any absolute zero in Interval data type.  One such example is 0 Celsius temperature which does not mean that the temperature is absent."],
+	 "context" : [""]
+	},
+	{"tag":"134",
+	 "patterns": ["Which data object in R is used to store and process categorical data ?"],
+	 "responses":["The Factor data objects in R are used to store and process categorical data in R."],
+	 "context" : [""]
+	},
+	{"tag":"135",
+	 "patterns": ["What is a Factor variable ?"],
+	 "responses":["Factor variable is a variable which can take only limited set of values. In other words, the levels of a factor variable will be limited."],
+	 "context" : [""]
+	},
+	{"tag":"136",
+	 "patterns": ["What is lazy function evaluation in R ?"],
+	 "responses":["The lazy evaluation of a function means, the argument is evaluated only if it is used inside the body of the function. If there is no reference to the argument in the body of the function then it is simply ignored."],
+	 "context" : [""]
+	},
+	{"tag":"138",
+	 "patterns": ["What is the difference between subset() function and sample() function in R ?"],
+	 "responses":["The subset() functions is used to select variables and observations. The sample() function is used to choose a random sample of size n from a dataset."],
+	 "context" : [""]
+	},
+	{"tag":"139",
+	 "patterns": ["Is an array a matrix or a matrix an array ?"],
+	 "responses":["Every matrix can be called an array but not the reverse. Matrix is always two dimensional but array can be of any dimension."],
+	 "context" : [""]
+	},
+	{"tag":"140",
+	 "patterns": ["How do you convert the data in a JSON file to a data frame ?"],
+	 "responses":["Using the function as.data.frame()"],
+	 "context" : [""]
+	},
+	{"tag":"141",
+	 "patterns": ["What is R Base package ?"],
+	 "responses":["This is the package which is loaded by default when R environment is set. It provides the basic functionalities like input/output, arithmetic calculations etc. in the R environment."],
+	 "context" : [""]
+	},
+	{"tag":"142",
+	 "patterns": ["What is recycling of elements in a vector? Give an example."],
+	 "responses":["When two vectors of different length are involved in a operation then the elements of the shorter vector are reused to complete the operation. This is called element recycling. Example - v1 <- c(4,1,0,6) and V2 <- c(2,4) then v1*v2 gives (8,4,0,24). The elements 2 and 4 are repeated."],
+	 "context" : [""]
+	},
+	{"tag":"143",
+	 "patterns": ["What is reshaping of data in R ?"],
+	 "responses":["In R the data objects can be converted from one form to another. For example we can create a data frame by merging many lists. This involves a series of R commands to bring the data into the new format. This is called data reshaping."],
+	 "context" : [""]
+	},
+	{"tag":"144",
+	 "patterns": ["What is the output of runif(4) ?"],
+	 "responses":["It generates 4 random numbers between 0 and 1."],
+	 "context" : [""]
+	},
+	{"tag":"145",
+	 "patterns": ["What are the different types of Discrete Probability Distributions ?"],
+	 "responses":["Binomial, Poisson, Negative Binomial, Geometric, Hypergeometric are the examples of Discrete Probability Dsitributions."],
+	 "context" : [""]
+	},
+	{"tag":"146",
+	 "patterns": ["What are the different types of Continuous Probability Distribution ?"],
+	 "responses":["Normal, Exponential, t, f, Chi-square, Unifrom, Weibull are few of the examples of Continuous Probability Distributions."],
+	 "context" : [""]
+	},
+	{"tag":"147",
+	 "patterns": ["What do you mean by Binomial Distribution ?"],
+	 "responses":["Binomial Distribution can be simply thought of as the probability of Success of Failure outcome in an experiment that is conducted multiple times. Exmaples: Head and Tail outcomes after tossing a coin, Pass or Fail after appearing for an examination."],
+	 "context" : [""]
+	},
+	{"tag":"148",
+	 "patterns": ["What is a Poisson Distribution ?"],
+	 "responses":["Poisson Distribution gives the probability of a number of events happening in a fixed interval or space. Number of customers visiting a restaurant every day."],
+	 "context" : [""]
+	},
+	{"tag":"149",
+	 "patterns": ["What do you mean by Negative Binomial Distribution ?"],
+	 "responses":["It is the distribution of number of successes occuring in a sequence of independently and identically distributed Bernoulli trials before a specied number of failures occurs Example: From a lot of tires containing 5% defectives, if 4 tires have to be chosen at random then what is the probability of finding 2 defective tires before 4 good ones."],
+	 "context" : [""]
+	},
+	{"tag":"150",
+	 "patterns": ["Explain Normal Distribution ?"],
+	 "responses":["The normal distribution or a bell curve is a probability function that describes how the values of a variable are distributed by its mean and standard deviation. Distribution of heights, weights, salaries of people are examples of Normal distribution."],
+	 "context" : [""]
+	},
+	{"tag":"151",
+	 "patterns": ["What is Chi-square distribution ?"],
+	 "responses":["A standard normal deviate is a random sample from the standard normal distribution. The Chi-Square distribution is the distribution of the sum of squared standard normal deviates. The degrees of freedom of the distribution is equal to the number of standard normal deviates being summed. Therefore, Chi-Square with one degree of freedom, written as χ2(1), is simply the distribution of a single normal deviate squared. The area of a Chi-Square distribution below 4 is the same as the area of a standard normal distribution below 2, since 4 is 22."],
+	 "context" : [""]
+	},
+	{"tag":"152",
+	 "patterns": ["What do you mean by Uniform Distribution ?"],
+	 "responses":["Uniform Distribution is the simplest of all the statistical distributions. It is sometimes also known as a rectangular distribution, is a distribution that has constant probability. This distribution is defined by two parameters, a and b, a being minimum value and b the maximum value. Examples: Probability of a flight landing between 25 to 30 minutes when it is anounced that the flight will be landing in 30 minutes. Continuous Uniform Distribution (resembles rectangle) and Discrete Uniform Distribution (rectangle in the form of a dots) are the two types of Uniform Distribution."],
+	 "context" : [""]
+	},
+	{"tag":"153",
+	 "patterns": ["What is T-Distribution ?"],
+	 "responses":["The T distribution also known as, Student’s T-distribution is a probability distribution that is used to estimate population parameters when the sample size is small and/or when the population variance is unknown."],
+	 "context" : [""]
+	},
+	{"tag":"154",
+	 "patterns": ["Explain F-Distribution ?"],
+	 "responses":["Probability distribution for the statistical measure 'F-statistic' is called as F Distribution. It will be a skewed dsitribution used for ANOVA testing. Minimum value will be 0 and there is no standard maximum value. Here F statistic is nothing but the value that you get in the output of ANOVA or Regression analysis. F test will tell you if a group of variables are staisitically significant."],
+	 "context" : [""]
+	},
+	{"tag":"155",
+	 "patterns": ["When is it appropriate to employ a Bar plot ?"],
+	 "responses":["A Bar plot of a numerical variable will be cluttered and makes it difficult for interpretation, whereas it makes sense to employ bar plot on categorical variable as we can interpret it in an efficient way."],
+	 "context" : [""]
+	},
+	{"tag":"156",
+	 "patterns": ["Why Standard Deviation when we have Variance measure ?"],
+	 "responses":["Variance is calculated to find how the individual data points are away from the mean, nothing but dispersion in the data. It is calculated as the averge of the square of the difference of mean from each data point. So from this calculation, we know for a fact that units are getting squared. There is way to get rid of squared units without having the necessity of standard deviation is by taking an absolute instead of square in the variance calculation. But the problem with taking absolute is it will lead to misleading results, for example, two variable X1(4,4,-4,-4) & X2(7,1,-6,-2) you get same variance as 4 if absolute is used and different variances as 4 & 4.74 when squared is used. For this reason we resort to squaring the difference of each value from it's mean. At this stage, if we interpret dispersion of data based on Variance, it shall confusion as the values & units are square.Hence, we resort to Standard Deviation."],
+	 "context" : [""]
+	},
+	{"tag":"157",
+	 "patterns": ["Why the probability associated with a single value of a continuous random variable is considered to be zero ?"],
+	 "responses":["A continuous random variable takes an infinite number of possible values. As the number of values assumed by the random variable is infinite, the probability of observing a single value is zero."],
+	 "context" : [""]
+	},
+	{"tag":"158",
+	 "patterns": ["List out the different Sampling Techniques."],
+	 "responses":["Probability Sampling and Non-Probability Sampling are the broader classifications of Sampling techniques. The difference lies between the above two is whether the sample selection is based on randomization or not. With randomization, every element gets equal chance to be picked up and to be part of sample for study."],
+	 "context" : [""]
+	},
+	{"tag":"159",
+	 "patterns": ["What do you mean by Sampling Error ?"],
+	 "responses":["An error occured during the sampling process if referred to as a Sampling Error. It can include both Systematic Sampling Error or Random Sampling Error. Systematic sampling error is the fault of the investigation, but random sampling error is not."],
+	 "context" : [""]
+	},
+	{"tag":"160",
+	 "patterns": ["Explain Probability Sampling and it's types"],
+	 "responses":["This Sampling technique uses randomization to make sure that every element of the population gets an equal chance to be part of the selected sample. It’s alternatively known as random sampling. Simple Random Sampling, Stratified Sampling, Systematic Sampling, Cluster Sampling, Multi stage Sampling are the types of Probability Sampling."],
+	 "context" : [""]
+	},
+	{"tag":"161",
+	 "patterns": ["Explain Simple Random Sampling."],
+	 "responses":["Every element has an equal chance of getting selected to be the part sample. It is used when we don’t have any kind of prior information about the target population.For example: Random selection of 20 students from class of 50 student. Each student has equal chance of getting selected. Here probability of selection is 1/50."],
+	 "context" : [""]
+	},
+	{"tag":"162",
+	 "patterns": ["Explain Stratified Sampling."],
+	 "responses":["This technique divides the elements of the population into small subgroups (strata) based on the similarity in such a way that the elements within the group are homogeneous and heterogeneous among the other subgroups formed. And then the elements are randomly selected from each of these strata. We need to have prior information about the population to create subgroups."],
+	 "context" : [""]
+	},
+	{"tag":"163",
+	 "patterns": ["Explain Cluster Sampling."],
+	 "responses":["Our entire population is divided into clusters or sections and then the clusters are randomly selected. All the elements of the cluster are used for sampling. Clusters are identified using details such as age, sex, location etc. Single Stage Cluster Sampling or Two Stage Cluster Sampling can be used to performm Cluster Sampling."],
+	 "context" : [""]
+	},
+	{"tag":"164",
+	 "patterns": ["Explain Multi-Stage Sampling."],
+	 "responses":["d then these clusters are further divided and grouped into various sub groups (strata) based on similarity. One or more clusters can be randomly selected from each stratum. This process continues until the cluster can’t be divided anymore. For example country can be divided into states, cities, urban and rural and all the areas with similar characteristics can be merged together to form a strata."],
+	 "context" : [""]
+	},
+	{"tag":"165",
+	 "patterns": ["Explain Non-Probability Sampling and it's types."],
+	 "responses":["It does not rely on randomization. This technique is more reliant on the researcherâ€™s ability to select elements for a sample. Outcome of sampling might be biased and makes difficult for all the elements of population to be part of the sample equally. This type of sampling is also known as non-random sampling. Convenience Samping, Purposive Sampling, Quota Sampling, Referral/Snowball Sampling are the types of Non-Probability Sampling."],
+	 "context" : [""]
+	},
+	{"tag":"166",
+	 "patterns": ["Explain Convenience Sampling"],
+	 "responses":["Here the samples are selected based on the availability. This method is used when the availability of sample is rare and also costly. So based on the convenience samples are selected. For example: Researchers prefer this during the initial stages of survey research, as it’s quick and easy to deliver results."],
+	 "context" : [""]
+	},
+	{"tag":"167",
+	 "patterns": ["Explain Purposive Sampling"],
+	 "responses":["This is based on the intention or the purpose of study. Only those elements will be selected from the population which suits the best for the purpose of our study.For Example: If we want to understand the thought process of the people who are interested in pursuing master’s degree then the selection criteria would be “Are you interested for Masters in..?”. All the people who respond with a “No” will be excluded from our sample."],
+	 "context" : [""]
+	},
+	{"tag":"168",
+	 "patterns": ["Explain Quota Sampling"],
+	 "responses":["This type of sampling depends of some pre-set standard. It selects the representative sample from the population. Proportion of characteristics/ trait in sample should be same as population. Elements are selected until exact proportions of certain types of data is obtained or sufficient data in different categories is collected. For example: If our population has 45% females and 55% males then our sample should reflect the same percentage of males and females."],
+	 "context" : [""]
+	},
+	{"tag":"169",
+	 "patterns": ["Explain Referral or Snowball Sampling"],
+	 "responses":["This technique is used in the situations where the population is completely unknown and rare. Therefore we will take the help from the first element which we select for the population and ask him to recommend other elements who will fit the description of the sample needed. So this referral technique goes on, increasing the size of population like a snowball.For example: It’s used in situations of highly sensitive topics like HIV Aids. Not all the victims will respond to the questions asked so researchers can contact people they know or volunteers to get in touch with the victims and collect information."],
+	 "context" : [""]
+	},
+	{"tag":"170",
+	 "patterns": ["Explain Systematic Sampling Error."],
+	 "responses":["When errors are systematic, they bias the sample in one direction. Under these circumstances, the sample does not truly represent the population of interest. Systematic error occur s when the sample is not drawn properly. It can also occur if names are dropped from the sample list because some individuals were difficult to locate or uncooperative. Individuals dropped from the sample could be different from those retained. Those remaining could quite possibly produce a biased sample. Political polls often have special problems that make prediction difficult."],
+	 "context" : [""]
+	},
+	{"tag":"171",
+	 "patterns": ["Explain Random Sampling Error."],
+	 "responses":["Random sampling error, as contrasted to systematic sampling error, is often referred to as chance error. Purely by chance, samples drawn from the same population will rarely provide identical estimates of the population parameter of interest. These estimates will vary from sample to sample. For example, if you were to flip 100 unbiased coins, you would not be surprised if you obtained 55 heads on one trial, 49 on another, 52 on a third, and so on."],
+	 "context" : [""]
+	},
+	{"tag":"172",
+	 "patterns": ["What do you mean by Empirical Rule"],
+	 "responses":["In Statistics, 68–95–99.7 rule is also known as the empirical rule or three sigma rule. For a Gaussian distribution the the mean (arithmetic average), median (central value), and mode (most frequent value) coincide. Here, area under the curve between ± 1s (1 sigma) includes 68% of all values (of the population), while ± 2s (2 sigma) includes 95% and ± 3s (3 sigma) includes 99.7% of all values."],
+	 "context" : [""]
+	},
+	{"tag":"173",
+	 "patterns": ["In order to come up with a Linear Regression output a minimum of how many obervations are required."],
+	 "responses":["Output of Linear Regression is in the form of equation of straight line which requires atleast 2 observations."],
+	 "context" : [""]
+	},
+	{"tag":"174",
+	 "patterns": ["How can you say that Standard Normal Distribution is better than Normal Distribution ?"],
+	 "responses":["It is inappropriate to say that Sam with 80 score in English Literature is better than Tom with 60 score in Pyschology, as the variability of scores within the subjects may vary. In order to compare the scores of two different subjects, we need to standardize the deviations of the subjects and then compare the results.. This can be done using Z transformation, which gives 0 as mean and 1 as Standard Deviation for any normally distributed data. Assuming SD=77, Mean=3 for English Literature and SD=56 , Mean=2 and Pyschology, we get 1,2 as z scores or SD away from Mean for English Literature and Pyschology. Now you can say that English Literature Tom performed better than Sam."],
+	 "context" : [""]
+	},
+	{"tag":"175",
+	 "patterns": ["What do you mean by a Quantile ?"],
+	 "responses":["Often referred to as Percentiles, Quantiles are the point(values) in your data below which certain proportion of data falls. For example Median is also a quantile or 50th percentile below which 50% of the data falls."],
+	 "context" : [""]
+	},
+	{"tag":"176",
+	 "patterns": ["How is a Normal QQ plot plotted , what is it's use and why is it called as a Normal QQ plot ?"],
+	 "responses":["A Q-Q Plot or a Quantile-Quantile Plot is plotted by considering raw values of a variable on Y axis and it's standardized values on X axis. It is used to assess the distribution of the underlying data, the distribution could be any of the theoretical distributions like Normal, Exponential, etc. Mostly we will be interested to find if the distribution of underlying data (variable) follows normal distribution or not, Q-Q Plot is called as Normal Q-Q Plot."],
+	 "context" : [""]
+	},
+	{"tag":"177",
+	 "patterns": ["What is the use of the reference line in Normal Q-Q plot ?"],
+	 "responses":["Reference Line indicates the normal distribution of the data. If most of the data points in a Normal Q-Q Plot are falling across the refence line then we say that the distribution of the undelying data (variable) follows Normal Distribution."],
+	 "context" : [""]
+	},
+	{"tag":"178",
+	 "patterns": ["What are the R functions to plot QQ Plot and the reference line in a Q-Q Plot ?"],
+	 "responses":["qqnorm() is used to plot a Q-Q Plot whereas qqline() is used to plot the refence line."],
+	 "context" : [""]
+	},
+	{"tag":"179",
+	 "patterns": ["Differentiate between Sample Variance and Sampling Variation ?"],
+	 "responses":["Sample Variance refers to the variation of observations in a single sample whereas Sampling Variance refers to the variation of a statistical measure (eg., Mean) among multiple samples."],
+	 "context" : [""]
+	},
+	{"tag":"180",
+	 "patterns": ["How is Standard Deviation different from Standard Error ?"],
+	 "responses":["Stadard Deviation and Standard Error are both measures of dispersion or spreadness. Standard Deviation uses Population data and Standard Error uses Sample data. Standard Error tells you have far a sample statistic (eg., sample mean) deviates from the actual Population mean. This deviation is referred as the Standard Error. Larger the sample size, less will be the deviation (SE) between the sample mean and the population mean."],
+	 "context" : [""]
+	},
+	{"tag":"181",
+	 "patterns": ["Explain Central Limit Theorem."],
+	 "responses":["Central Limit Theorem explains about the distribution of the sample data. The distribution will be normal, if the population data is normally distributed or if the propulation data is not normal but the sample size is fairly large."],
+	 "context" : [""]
+	},
+	{"tag":"182",
+	 "patterns": ["What is the necessity of a Confidence Interval ?"],
+	 "responses":["We cannot trust a point esitmate (for example a sample mean) to infer about Population mean, reason being, if we draw another sample it is more likely that we will get a different sample mean all together. To overcome this problem, we come up with an Interval associated with some Confidence. This can be achieved by including Magin of Error with Point Estimate which gives us the Confidence Interval."],
+	 "context" : [""]
+	},
+	{"tag":"183",
+	 "patterns": ["What is the R function to calculate z value from probability value ?"],
+	 "responses":["qnorm"],
+	 "context" : [""]
+	},
+	{"tag":"184",
+	 "patterns": ["What is the R function to calculate t value from probability value ?"],
+	 "responses":["qt"],
+	 "context" : [""]
+	},
+	{"tag":"185",
+	 "patterns": ["Do we have standard z values for different probability values, explain ?"],
+	 "responses":["Yes, we have standard z values for different probability values. For example, 1.64 for 90%, 1.96 for 95%, & 2.58 for 99% probability values."],
+	 "context" : [""]
+	},
+	{"tag":"186",
+	 "patterns": ["Do we have standard t values for different probability values, explain ?"],
+	 "responses":["We will not have standard t values for different probability values, reason being the computation of t value includes degrees of freedom, which is dependent on the sample size. Hence for the same probability with different degrees of freedom we get different t values."],
+	 "context" : [""]
+	},
+	{"tag":"187",
+	 "patterns": ["Why do we have to include Random Sample while interpreting Confidence Interval ?"],
+	 "responses":["If we were asked to comment about Population Mean (a single value, which do not change) by using Sample Data  (randomly selected from the Population), we do not calculate Population Mean( i.e., Point Estimate) instead we come up with a Confidence Interval. Now, if another Sample Data is randomly drawn and CI is computed then then it is quite obvious that we will get a different CI all together. Hence, you can say that CI is dependent on the drawn sample. Therefore, it is always mandatory to interpret CI by including random sample."],
+	 "context" : [""]
+	},
+	{"tag":"188",
+	 "patterns": ["What do you mean by Degrees of Freedom ?"],
+	 "responses":["Degrees of freedom are the number of independent values that a statistical analysis can estimate. You can also think of it as the number of values that are free to vary as you estimate parameters They appear in the output of Hypothesis Tests, Probability Distributions, Regression Analysis. Degrees of freedom is equal your sample size minus the number of parameters you need to calculate during an analysis. It is usually a positive whole number."],
+	 "context" : [""]
+	},
+	{"tag":"189",
+	 "patterns": ["When do we go for T-distribution ?"],
+	 "responses":["T Distribution or Student's T Distribution is employed when the Population Standard Deviation is unknonw and the sample size is less than 30. If the Sample Size is >= 30 then T Distribution appears similar to Normal Distribution."],
+	 "context" : [""]
+	},
+	{"tag":"190",
+	 "patterns": ["What do you mean by Hypothesis Testing ?"],
+	 "responses":["It is the way of testing results of an experiment whether they are valid and meaningful and have not occured just by chance. If the results have happened just by chance then the experiment cannot be repeated and is not reusable."],
+	 "context" : [""]
+	},
+	{"tag":"191",
+	 "patterns": ["What is Null Hypothesis in Hypothesis Testing ?"],
+	 "responses":["Null Hypothesis is nothing but a statement which is usually true. On top of Null Hypothesis we conduct various Hypothesis Tests to see if Null Hypothesis holds true or not. Null Hypothesis is denoted by Ho."],
+	 "context" : [""]
+	},
+	{"tag":"192",
+	 "patterns": ["Why is naive Bayes so ‘naive’ ?"],
+	 "responses":["naive Bayes is so ‘naive’ because it assumes that all of the features in a data set are equally important and independent. As we know, these assumption are rarely true in real world scenario."],
+	 "context" : [""]
+	},
+	{"tag":"193",
+	 "patterns": ["What do you mean by Prior Probability ?"],
+	 "responses":["Prior probability is the proportion of dependent variable in the data set. It is the closest guess you can make about a class, without any further information."],
+	 "context" : [""]
+	},
+	{"tag":"194",
+	 "patterns": ["How is True Positive Rate and Recall related? Write the equation."],
+	 "responses":["True Positive Rate = Recall. Yes, they are equal having the formula (TP/TP + FN)."],
+	 "context" : [""]
+	},
+	{"tag":"195",
+	 "patterns": ["How do you select important variables in EDA ?"],
+	 "responses":["1.Remove the correlated variables prior to selecting important variables.2.Use linear regression and select variables based on p values.3.Use Forward Selection, Backward Selection, Stepwise Selection.4.Use Random Forest, Xgboost and plot variable importance chart.5.Use Lasso Regression.6.Measure information gain for the available set of features and select top n features accordingly."],
+	 "context" : [""]
+	},
+	{"tag":"196",
+	 "patterns": ["What is the difference between covariance and correlation ?"],
+	 "responses":["Covariance is a measure to know how to variables change together.Covariances are difficult to compare. For example: if we calculate the covariances of salary ($) and age (years), we’ll get different covariances which can’t be compared because of having unequal scales. To combat such situation, we calculate correlation to get a value between -1 and 1, irrespective of their respective scale. Correlation is the standardized form of covariance."],
+	 "context" : [""]
+	},
+	{"tag":"197",
+	 "patterns": ["Is there a way to capture the correlation between continuous and categorical variable ?"],
+	 "responses":["ANCOVA (analysis of covariance) technique to capture association between continuous and categorical variables."],
+	 "context" : [""]
+	},
+	{"tag":"198",
+	 "patterns": ["what is the difference between covariance and correlation ?"],
+	 "responses":["A classification trees makes decision based on Gini Index and Node Entropy. Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure. Entropy is the measure of impurity in the dataset.  Entropy is zero when a node is homogeneous. It is maximum when a both the classes are present in a node at 50% – 50%.  Lower entropy is desirable."],
+	 "context" : [""] 
+	},
+    {"tag": "greeting",
          "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
          "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
          "context": [""]
@@ -246,11 +1116,6 @@
          "responses": ["data() gives a list of all inbuilt datasets in R."],
          "context": [""]
         },
-		{"tag": "253",
-         "patterns": ["The alpha value for a standard normal distribution data having acceptable probability in a range of values [-1 to +1]"],
-         "responses": ["0.318 (we have to calculate the alpha region for a standard normal distribution with z values (-1, +1)) "],
-         "context": [""]
-        },
 		{"tag": "254",
          "patterns": ["Dependent variable is sometimes called as "],
          "responses": ["response variable,predicted variable,measured variable,output variable "],
@@ -285,6 +1150,668 @@
          "patterns": ["What is logistic regression"],
          "responses": ["Logistic regression is a technique to predict a binary dependent variable. The logistic regression has a sigmoid curve nature where the output value either is 0 or 1"],
          "context": [""]
+        },
+        {"tag": "266",
+         "patterns": ["What is the basis of Naïve Bayes method?", "What can be considered as a basis of Naive Bayes method?", "Naive Bayes method is based on ", "Name an algorithm which is based on conditional probability"],
+         "responses": ["Conditional Probability", "Conditional Probability", "Conditional Probability", "Naive Bayes"],
+         "context": [""]
+        },
+        {"tag": "267",
+         "patterns": ["Naïve Bayes formula works well for"],
+         "responses": ["Classification"],
+         "context": [""]
+        },
+        {"tag": "268",
+         "patterns": ["A tool that uses a tree-like model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility", "What is Decision Tree?", "Explain Decision Tree"],
+         "responses": ["Decision Tree", "Decision Tree is a tool that uses a tree-like model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility","A decision tree is a classifier technique based on rules generated with a tree-like graph.A Path from Root node till Leaf node is called as one classification rule"],
+         "context": [""]
+        },
+        {"tag": "269",
+         "patterns": ["Pruning is the inverse of", "What is pruning?"],
+         "responses": ["Splitting", "Pruning is a technique in machine learning that reduces the size of decision trees by removing sections of the tree that provide little power to classify instances."],
+         "context": [""]
+        },
+        {"tag": "270",
+         "patterns": ["Give some ways of measuring accuracy for a supervised learning technique"],
+         "responses": ["Error calculations can be done by MAD, RMSE, or MAPE. Less the error better the accuracy"],
+         "context": [""]
+        },
+        {"tag": "271",
+         "patterns": ["The multiple coefficients of determination computed by", "How is the multiple coefficients of determination computed by?"],
+         "responses": ["dividing SSR by SST", "The multiple coefficients of determination computed by dividing SSR by SST"],
+         "context": [""]
+        },
+        {"tag": "273",
+         "patterns": ["The technique used for imputing missing values of both categorical and continuous variables?", "Explain Imputation"],
+         "responses": ["KNN method can be used for predicting both categorical or continuous value", "Imputation is a technique to find a logical value for missing value in the dataset. KNN method can be used for predicting both categorical or continuous value"],
+         "context": [""]
+        }, 
+	{"tag": "274",
+         "patterns": ["For a normally distributed data, what percentage of data values are smaller than the mean?"],
+         "responses": ["Normally distributed data will be symmetrical across the mean. Hence 50% of the data lies towards the left side and 50% of the data lies right side from the mean."],
+         "context": [""]
+	}, 
+	{"tag": "275",
+         "patterns": ["A data collector when collecting the data should always"],
+         "responses": ["know how the data are to be used. Techniques used for the collection of data is decided after the business problem is defined."],
+         "context": [""]
+	}, 
+	{"tag": "276",
+         "patterns": ["The cause of an error or unknown variability in the depended variable is", "What is noise factor?"],
+         "responses": ["Noise factor", "The cause of an error or unknown variability in the depended variable is called noise factor."],
+         "context": [""]
+	},
+	{"tag": "278",
+         "patterns": ["Steps to pre-process the text in NLP based projects?"],
+         "responses": ["Stemming, Stop word removal & Object Standardization."],
+         "context": [""]
+	},
+	{"tag": "279",
+         "patterns": ["Is standardization required for logistic regression?"],
+         "responses": ["Standardization isn’t required for logistic regression. The main goal of standardizing features is to help convergence of the technique used for optimization."],
+         "context": [""]
+	},
+	{"tag": "280",
+         "patterns": ["Name an algorithm which is used for variable selection?"],
+         "responses": ["LASSO. In case of lasso we apply a absolute penality, after increasing the penality in lasso some of the coefficient of variables may become zero."],
+         "context": [""]
+	},
+	{"tag": "282",
+         "patterns": ["Do gradient descent methods always converge to same point?"],
+         "responses": ["No, they do not because in some cases it reaches a local minima or a local optima point. You don’t reach the global optima point. It depends on the data and starting conditions"],
+         "context": [""]
+	},
+	{"tag": "283",
+         "patterns": ["Explain about the box cox transformation in regression models.", "box cox transformation in regression models"],
+         "responses": ["For some reason or the other, the response variable for a regression analysis might not satisfy one or more assumptions of an ordinary least squares regression.The residuals could either curve as the prediction increases or  follow skewed distribution. In such scenarios, it is necessary to transform the response variable so that the data  meets the required assumptions. A Box cox transformation is a statistical technique to transform non-mornla dependent variables into a normal shape. If the given data is not normal then most of the statistical techniques assume normality. Applying a box cox transformation means that you can run a broader number of tests."],
+         "context": [""]
+	},
+	{"tag": "284",
+         "patterns": ["What is the difference between Bayesian Estimate and Maximum Likelihood Estimation (MLE)?", "Bayesian Estimate and Maximum Likelihood Estimation (MLE)?"],
+         "responses": ["In bayesian estimate we have some knowledge about the data/problem (prior) .There may be several values of the parameters which explain data and hence we can look for multiple parameters like 5 gammas and 5 lambdas that do this. As a result of Bayesian Estimate, we get multiple models for making multiple predcitions i.e. one for each pair of parameters but with the same prior. So, if a new example need to be predicted than computing the weighted sum of these predictions serves the purpose.Maximum likelihood does not take prior into consideration (ignores the prior) so it is like being a Bayesian  while using some kind of a flat prior"],
+         "context": [""]
+	},
+	{"tag": "285",
+         "patterns": ["What is logistic regression? Or State an example when you have used logistic regression recently?", "logistic regression?"],
+         "responses": ["Logistic Regression often referred as logit model is a technique to predict the binary outcome from a linear combination of predictor variables. For example, if you want to predict whether a particular political leader will win the election or not. In this case, the outcome of prediction is binary i.e. 0 or 1 (Win/Lose). The predictor variables here would be the amount of money spent for election campaigning of a particular candidate, the amount of time spent in campaigning, etc."],
+         "context": [""]
+	},
+	{"tag": "286",
+         "patterns": ["What are Recommender Systems?"],
+         "responses": ["A subclass of information filtering systems that are meant to predict the preferences or ratings that a user would give to a product. Recommender systems are widely used in movies, news, research articles, products, social tags, music, etc."],
+         "context": [""]
+	},
+	{"tag": "287",
+         "patterns": ["Why data cleaning plays a vital role in analysis?", "data cleaning"],
+         "responses": ["Cleaning data from multiple sources to transform it into a format that data analysts or data scientists can work with is a cumbersome process because - as the number of data sources increases, the time take to clean the data increases exponentially due to the number of sources and the volume of data generated in these sources. It might take up to 80% of the time for just cleaning data making it a critical part of analysis task."],
+         "context": [""]
+	},
+	{"tag": "288",
+         "patterns": ["Differentiate between univariate, bivariate and multivariate analysis", "univariate, bivariate and multivariate analysis"],
+         "responses": ["These are descriptive statistical analysis techniques which can be differentiated based on the number of variables involved at a given point of time. For example, the pie charts of sales based on territory involve only one variable and can be referred to as univariate analysis.If the analysis attempts to understand the difference between 2 variables at time as in a scatterplot, then it is referred to as bivariate analysis. For example, analysing the volume of sale and a spending can be considered as an example of bivariate analysis.Analysis that deals with the study of more than two variables to understand the effect of variables on the responses is referred to as multivariate analysis."],
+         "context": [""]
+	},
+	{"tag": "289",
+         "patterns": ["What is Machine Learning?"],
+         "responses": ["Machine learning is the science of getting computers to act without being explicitly programmed. Machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. It is so widespread that unknowingly we use it many a times in our daily life."],
+         "context": [""]
+	},
+	{"tag": "290",
+         "patterns": ["What is Supervised Machine Learning?"],
+         "responses": ["Supervised Machine Learning will be employed for the problem statements where in output variable (Nominal) of interest can be either classified or predicted.Examples: KNN, Naive Bayes, SVM, Decision Tree, Random Forest, Neural Network"],
+         "context": [""]
+	},
+	{"tag": "291",
+         "patterns": ["What is Unsupervised Machine Learning?"],
+         "responses": ["In this category of Machine Learning, there won’t be any output variable to be either predicted or classified. Instead the algorithm understands the patterns in the data.Examples: Segmentation, PCA, SVD, Market Basket Analysis, Recommender Systems."],
+         "context": [""]
+	},
+	{"tag": "292",
+         "patterns": ["What is Classification Modeling?"],
+         "responses": ["Classification Models are employed when the observations have to be classified in categories and not predicted.Examples being Cancerous and Non-cancerous tumor (2 categories),  Bus, Rail, Car, Carpool (>2 categories)"],
+         "context": [""]
+	},
+	{"tag": "293",
+         "patterns": ["Examples of Unsupervised Machine Learning"],
+         "responses": ["Segmentation, PCA, SVD, Market Basket Analysis, Recommender Systems"],
+         "context": [""]
+	},
+	{"tag": "294",
+         "patterns": ["Examples of Supervised Machine Learning"],
+         "responses": ["KNN, Naive Bayes, SVM, Decision Tree, Random Forest, Neural Network"],
+         "context": [""]
+	},
+	{"tag": "295",
+         "patterns": ["Why is hierarchial clustering called as Agglomerative clustering?", "hierarchial clustering called as Agglomerative clustering?"],
+         "responses": ["It is because of bottom up approach, where initially each observation is considered to be a single cluster and gradually based on the distance measure inidividual clusters will be paired and finally merged as one."],
+         "context": [""]
+	},
+	{"tag": "296",
+         "patterns": ["When can you say that resultant clusters are good?"],
+         "responses": ["When the clusters are as much heterogenous as possible and when the observations within each cluster are as much homogeenous as possible."],
+         "context": [""]
+	},
+	{"tag": "297",
+         "patterns": ["In which domains can we employ clustering?"],
+         "responses": ["None of your data science topics are domain specific. They can be employed in any domain, provided data is available."],
+         "context": [""]
+	},
+	{"tag": "298",
+         "patterns": ["Example of clustering?"],
+         "responses": ["Using variables like income, education,  profession, age, number of children, etc you come with different clusters and each cluster has people with similar socio-economic criteria."],
+         "context": [""]
+	},
+	{"tag": "299",
+         "patterns": ["Is normalization of data required before applying clustering?"],
+         "responses": ["It would be better if we employ clustering on normalized data as you will get different results for with and without normalization"],
+         "context": [""]
+	},
+	{"tag": "300",
+         "patterns": ["What is the range of Z transformed variable?", "range of Z transformed variable?"],
+         "responses": ["Theoretically it will be between - infinity to + inifinity but normally you have values between -3 to +3."],
+         "context": [""]
+	},
+	{"tag": "301",
+         "patterns": ["What is the range of variable when ((x - min(X))/(max(X) - min(X)) normalization technique is employed?", "range of variable when ((x - min(X))/(max(X) - min(X))"],
+         "responses": ["0 to 1 is the range for this normalizaion technique."],
+         "context": [""]
+	},
+	{"tag": "302",
+         "patterns": ["What does summary() command gives?", "summary()"],
+         "responses": ["summary() command gives the distribution for numerical variables and proportion of observations for factor variables."],
+         "context": [""]
+	},
+	{"tag": "303",
+         "patterns": ["What is str() command why is it required to run it?", "str() command"],
+         "responses": ["str() command gives dimensions for your data drame. In addition to this it gives, class of the dataset & class of every variable."],
+         "context": [""]
+	},
+	{"tag": "304",
+         "patterns": ["Packages to read excel files in R?"],
+         "responses": ["readxl or xlsx packages can be used to read excel files in R."],
+         "context": [""]
+	},
+	{"tag": "305",
+         "patterns": ["What are linkages in hierarchical clustering?", "linkages in hierarchical clustering?"],
+         "responses": ["Linkage is the criteria based on which distances between two clusters is computed. Single, Complete, Average are few of the examples for linkagesSingle - The distance between two clusters is defined as the shortest distance between two points in each cluster.Complete - The distance between two clusters is defined as the longest distance between two points in each cluster.Average - the distance between two clusters is defined as the average distance between each point in one cluster to every point in the other cluster."],
+         "context": [""]
+	},
+	{"tag": "306",
+         "patterns": ["How do we decide upon the number of clusters in hierarchial clustering?", "decide upon the number of clusters in hierarchial clustering?"],
+         "responses": ["In Hierarchial Clustering number of clusters will be decided only after looking at the dendrogram."],
+         "context": [""]
+	},
+	{"tag": "307",
+         "patterns": ["How to interpret clustering output?", "interpret clustering output?"],
+         "responses": ["After computing optimal clusters, aggregate measure like mean has to be computed on all variables and then resultant values for all the variables have to be interpreted among the clusters"],
+         "context": [""]
+	},
+	{"tag": "308",
+         "patterns": ["What is the use of set.seed() function ?", "set.seed() function ?"],
+         "responses": ["set.seed() function is to reproduce same results if the code is re-run again. Any number can be given within the paranthesis."],
+         "context": [""]
+	},
+	{"tag": "309",
+         "patterns": ["Why is KNN called as non-parametric algorithm?", "KNN called as non-parametric algorithm?"],
+         "responses": ["KNN makes no assumptions about the underlying data (unlike other algorithms, eg. Linear Regression)."],
+         "context": [""]
+	},
+	{"tag": "310",
+         "patterns": ["Why is KNN called as Lazy Algorithm?", "Lazy Algorithm?"],
+         "responses": ["There is no or minimal training phase because of which training phase is pretty fast. Here the training data is used during the testing phase."],
+         "context": [""]
+	},
+	{"tag": "311",
+         "patterns": ["How do we choose the value of K in KNN algorithm?", "choose the value of K in KNN algorithm?"],
+         "responses": ["K value can be selected using sqrt(no. of obs/2), kselection package, scree plot, k fold cross validation"],
+         "context": [""]
+	},
+	{"tag": "312",
+         "patterns": ["Function in R to employ KNN?"],
+         "responses": ["knn() can be used from the class package."],
+         "context": [""]
+	},
+	{"tag": "313",
+         "patterns": ["What is the r function to know the number of observations for the levels of a variable?", "r function to know the number of observations for the levels of a variable?"],
+         "responses": ["table() is the r function. It can be also be employed on any variable but it makes sense to employ on a factor variable."],
+         "context": [""]
+	},
+	{"tag": "314",
+         "patterns": ["What is the r function to know the percentage of observations for the levels of a variable?", "r function to know the percentage of observations for the levels of a variable?"],
+         "responses": ["prop.table() employed on top of table() function i.e., prop.table(table()) is the r function. It can be also be employed on any variable but it makes sense to employ on a factor variable."],
+         "context": [""]
+	},
+	{"tag": "315",
+         "patterns": ["Difference between lapply & sapply function?", "lapply & sapply function?"],
+         "responses": ["lapply returns the ouput as a list whereas sapply returns the ouput as a vector, matrix or array."],
+         "context": [""]
+	},
+	{"tag": "316",
+         "patterns": ["Can we represent the output of a classifer having more than two levels using a confusion matrix?"],
+         "responses": ["We cannot use confusion matix when we have more than two levels in the output variable. Instead, we can use crosstable() function from gmodels package."],
+         "context": [""]
+	},
+	{"tag": "317",
+         "patterns": ["What is Probability?", "Probability?"],
+         "responses": ["Probability is given by Number of interested events/Total number of events"],
+         "context": [""]
+	},
+	{"tag": "318",
+         "patterns": ["What is Joint probability?", "Joint probability?"],
+         "responses": ["It is the probability of two events occuring at the same time. Classical example is probability of an email being spam wih the word lottery in it.Here the events are email being spam and email having the word lottery."],
+         "context": [""]
+	},
+	{"tag": "319",
+         "patterns": ["What is the function to perform simple random sampling?", "function to perform simple random sampling?"],
+         "responses": ["sample() is the function in R to employ Simple Random Sampling."],
+         "context": [""]
+	},
+	{"tag": "320",
+         "patterns": ["Functions to find row & column count in R?", "find row & column count in R?"],
+         "responses": ["dim() function or nrow() & col() can be used to find row & column count"],
+         "context": [""]
+	},
+	{"tag": "321",
+         "patterns": ["What is the function to compute accuracy of a classifier?", "function to compute accuracy of a classifier?"],
+         "responses": ["mean() function can be used to compute the accuracy. Within paranthesis actual labels have to compared with predicted labels"],
+         "context": [""]
+	},
+	{"tag": "322",
+         "patterns": ["What is Bayes' Theorem?", "Bayes' Theorem?"],
+         "responses": ["Bayes’ Theorem finds the probability of an event occurring given the probability of another event that has already occurred. Mathematically it is given as P(A|B) = [P(B|A)P(A)]/P(B) where A & B are events.  P(A|B) called as Posterior Probability, is the probability of event A(response) given that B(independent) has already occured. P(B|A) is the likelihood of the training data i.e., probability of event B(indpendent) given that A(response) has already occured. P(A) is the probability of the response variable and P(B) is the probability of the training data or evidence."],
+         "context": [""]
+	},
+	{"tag": "323",
+         "patterns": ["What is the assumption of Naive Bayes Classifier?", "assumption of Naive Bayes Classifier?"],
+         "responses": ["The fundamental assumption is that each indepedent variable independently and equally contributes to the outcome."],
+         "context": [""]
+	},
+	{"tag": "324",
+         "patterns": ["What is SVM?", "SVM?"],
+         "responses": ["Here we plot each data point in n-dimensional space with the value of each dimension being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiate the classes very well."],
+         "context": [""]
+	},
+	{"tag": "325",
+         "patterns": ["What are the tuning parameters of SVM?", "tuning parameters of SVM?"],
+         "responses": ["Kernel, Regularization, Gamma and Margin are the tuning paramers of SVM."],
+         "context": [""]
+	},
+	{"tag": "326",
+         "patterns": ["Explain Kernel in SVM?", "Kernel in SVM?"],
+         "responses": ["Kernel tricks are nothing but the transformations applied on input variables which separate non-separable data to separable data. There are 9 different kernel tricks. Examples are Linear, RBF, Polynomial, etc."],
+         "context": [""]
+	},
+	{"tag": "327",
+         "patterns": ["Is there a need to convert categorical variables into numeric in SVM? If yes, explain"],
+         "responses": ["All the categorical variables have to be converted to numeric by creating dummy variables, as all the data points have to be plotted on n dimensional space, in addition to this we have tuning paramteters like Kernel, Regularization, Gamma & Margin which are mathematical computations that require numeric variables. This is an assumpton of SVM."],
+         "context": [""]
+	},
+	{"tag": "328",
+         "patterns": ["What is Regularization in SVM?", "Regularization in SVM?"],
+         "responses": ["The value of Regularization parameter tells the training model as to how much it can avoid misclassifying each training observation."],
+         "context": [""]
+	},
+	{"tag": "329",
+         "patterns": ["What is Gamma parameter in SVM?", "Gamma parameter in SVM?"],
+         "responses": ["Gamma is the kernel coefficient in the kernel tricks RBF, Polynomial, & Sigmoid. Higher values of Gamma will make the model more complex and overfits the model."],
+         "context": [""]
+	},
+	{"tag": "330",
+         "patterns": ["What do you mean by Margin in SVM?", "Margin in SVM?"],
+         "responses": ["Margin is the separation line to the closest class datapoints. Larger the margin width, better is the classification done. But before even achieving maximum margin, objective of te algorithm is to correctly classify datapoints."],
+         "context": [""]
+	},
+	{"tag": "331",
+         "patterns": ["What is the SVM package used for SVM in R?"],
+         "responses": ["kernlab is the package used in R for implementing SVM in R."],
+         "context": [""]
+        },
+		{"tag": "332",
+         "patterns": ["What is the function name to implement SVM in R?"],
+         "responses": ["ksvm is the function in R to implement SVM in R"],
+         "context": [""]
+        },
+		{"tag": "333",
+         "patterns": ["What is a decision tree?"],
+         "responses": ["Decision Tree is a superised machine learning algorithm used for classification and regression analysis. It is a tree-like structure in which internal node represents test on an attribute, each branch represents outcome of test and each leafe node represents class label."],
+         "context": [""]
+        },
+		{"tag": "334",
+         "patterns": ["What are rules in decision tree?"],
+         "responses": ["A path from root node to leaf node represents classification rules"],
+         "context": [""]
+        },
+		{"tag": "335",
+         "patterns": ["Explain different types of nodes in nodes in decision tree and how are they selected."],
+         "responses": ["We have Root Node, Internal Node, Leaf Node in a decision tree. Decision Tree starts at the Root Node, this is the first node of the decision tree. Data set is split based on Root Node, again nodes are selected to further split the already splitted data. This process of splitting the data goes on till we get leaf nodes, which are nothing but the classification labels. The process of selecting Root Nodes and Internal Nodes is done using the statistical measure called as Gain"],
+         "context": [""]
+        },
+		{"tag": "336",
+         "patterns": ["What is Pruning in Decision Tree?"],
+         "responses": ["The process of removal of sub nodes which contribute less power to the decision tree model is called as Pruning."],
+         "context": [""]
+        },
+		{"tag": "337",
+         "patterns": ["What is the advantage of Pruning?"],
+         "responses": ["Pruning reduces the complexity of the model which in turn reduces overfitting problem of Decision Tree. There are two strategies in Pruning. Propruning - discard unreliable parts from the fully grown tree, Prepruning - stop growing a branch when the information becomes unreliable. Postpruning is the preferred one."],
+         "context": [""]
+        },
+		{"tag": "338",
+         "patterns": ["What is the difference between Entropy and Information Gain?"],
+         "responses": ["Entropy is a probabilistic measure of uncertainity or impurity whereas Information Gain is the reduction of this uncertainity measure."],
+         "context": [""]
+        },
+		{"tag": "339",
+         "patterns": ["Explain the expression of Gain (of any column)?"],
+         "responses": ["Gain for any column is calculated by differencing Information Gain of a dataset with respect to a variable from the Information Gain of the entire dataset i.e., Gain(Age) = Info(D) - Info(D wrt Age)"],
+         "context": [""]
+        },
+		{"tag": "340",
+         "patterns": ["What is the package required to implement Decision Tree in R?"],
+         "responses": ["C50 and tree packages can be used to implement a decision tree algorithm in R."],
+         "context": [""]
+        },
+		{"tag": "341",
+         "patterns": ["What is Random Forest?"],
+         "responses": ["Random Forest is an Ensemble Classifer. As opposed to building a single decision tree, random forest builds many decision trees and combines the output of all the decision trees to give a stable output."],
+         "context": [""]
+        },
+		{"tag": "342",
+         "patterns": ["How does Random Forest adds randomness and build a better model?"],
+         "responses": ["Instead of searching for the most important feature while splitting a node, it searches for the best feature among a random subset of features. This results in a wide diversity that generally results in a better model. Additional randomness can be added by using random thresholds for each feature rather than searching for the best possible thresholds (like a normal decision tree does)."],
+         "context": [""]
+        },
+		{"tag": "343",
+         "patterns": ["What is the R package to employ Random Forest in R?"],
+         "responses": ["randomForest is the package to employ Random Forest in R"],
+         "context": [""]
+        },
+		{"tag": "344",
+         "patterns": ["What are the pros of using Random Forest?"],
+         "responses": ["Random Forest won't overfit the model, it is unexcelled in reliable accuracy, works very well on large data sets, can handle thousands of input variables without deletion, outputs significance of input variables, handles outliers and missing values very well"],
+         "context": [""]
+        },
+		{"tag": "345",
+         "patterns": ["What is the limitation of Random Forest?"],
+         "responses": ["The main limitation of Random Forest is that a large number of trees can make the algorithm to slow and ineffective for real-time predictions. In most real-world applications the random forest algorithm is fast enough, but there can certainly be situations where run-time performance is important and other approaches would be preferred."],
+         "context": [""]
+        },
+		{"tag": "346",
+         "patterns": ["What is a Neural Network?"],
+         "responses": ["Neural Network is a supervised machine learning algorithm which is inspired by human nervous system and it replicates the similar to how human brain is trained. It consists of Input Layers, Hidden Layers, & Output Layers."],
+         "context": [""]
+        },
+		{"tag": "347",
+         "patterns": ["What are the various types of Neural Networks?"],
+         "responses": ["Artificial Neural Network, Recurrent Neural Networks, Convolutional Neural Networks, Boltzmann Machine Networks, Hopfield Networks are examples of the Neural Networks. There are a few other types as well."],
+         "context": [""]
+        },
+		{"tag": "348",
+         "patterns": ["What is the use of activation functions in neural network?"],
+         "responses": ["Activation function is used to convert a input signal of a node in a A-NN to an output signal. That output signal now is used as a input in the next layer in the stack."],
+         "context": [""]
+        },
+		{"tag": "349",
+         "patterns": ["What are the different types of activation functions in neural network?"],
+         "responses": ["Sigmoid or Logistic, Tanh or Hyperbolic tangent, ReLu or Rectified Linear units are examples of activation functions in neural network"],
+         "context": [""]
+        },
+		{"tag": "350",
+         "patterns": ["What is the package name to implement neural network in R?"],
+         "responses": ["neuralnet package can be used to implement neural network in R"],
+         "context": [""]
+        },
+		{"tag": "351",
+         "patterns": ["What is a probability distribution?"],
+         "responses": ["A probability distribution is a function that provides the probabilities of occurrence of different possible outcomes in an experiment. In a probability distribution, random variable is plotted on X axis and associated probabilities are plotted on Y axis"],
+         "context": [""]
+        },
+		{"tag": "352",
+         "patterns": ["What are the classifications of probability distributions?"],
+         "responses": ["Probability distributions are categorized in two, Discrete and Continuous probability distributions. In discrete probability distribution underlying random variable is discrete whereas in conitnusous probability distribution underlying random variable is continuous"],
+         "context": [""]
+        },
+		{"tag": "353",
+         "patterns": ["What do you mean by discrete random variable?"],
+         "responses": ["A discrete random variable is a random variable that has countable values, such as a list of non-negative integers."],
+         "context": [""]
+        },
+		{"tag": "354",
+         "patterns": ["Examples of discrete random variables."],
+         "responses": ["Number of students present, number of red marbles in a jar, number of heads when flipping three coins, students' grade level are few of the examples of discrete random variables"],
+         "context": [""]
+        },
+		{"tag": "355",
+         "patterns": ["What do you mean by continuous random variable?"],
+         "responses": ["A continuous random variable is a random variable with a set of possible values (known as the range) that is infinite and uncountable."],
+         "context": [""]
+        },
+		{"tag": "356",
+         "patterns": ["Examples of continuous random variables"],
+         "responses": ["Height of students in class, weight of students in class, time it takes to get to school, distance traveled between classes are few of the examples of continuous random variables"],
+         "context": [""]
+        },
+		{"tag": "357",
+         "patterns": ["What do you mean by Expected Value?"],
+         "responses": ["Expected value (EV), also known as mean value, is the expected outcome of a given experiment, calculated as the weighted average of all possible values of a random variable based on their probabilities. EV(n) = x1P1 + X2P2+X3P3+...+XnPn"],
+         "context": [""]
+        },
+		{"tag": "358",
+         "patterns": ["What do you mean by Data Type?"],
+         "responses": ["A data type, in programming, is a classification that specifies which type of value a variable has and what type of mathematical, relational or logical operations can be applied to it without causing an error."],
+         "context": [""]
+        },
+		{"tag": "359",
+         "patterns": ["What are the classifications of data types in Statistics?"],
+         "responses": ["Qualitative and Quantitative are the broader classifications in R, however these are further classified into Nominal, Ordinal, Interval, & Ratio data types."],
+         "context": [""]
+        },
+		{"tag": "360",
+         "patterns": ["What is the difference between a nominal and an ordinal data type?"],
+         "responses": ["A nominal data type merely is a name or a label. Languages spoken by a person, jersey numbers of football players are examples of Nominal data type. Whereas, on top of being a name or a label, Ordinal data type has some natural ordering associated with it. Shirt sizes, Likert scale rating, Ranks of a competition, Educational background of a person are examples of Ordinal data type"],
+         "context": [""]
+        },
+		{"tag": "361",
+         "patterns": ["How is Interval data type different from Ratio?"],
+         "responses": ["Interval scales are numeric scales in which we know not only the order, but also the exact differences between the values, but the problem with the problem with interval scales is that they don’t have a “true zero. Temperature and Dates are examples of Interval data type. Whereas Ratio data type tell us about the order, exact value between units, and they also have an absolute zero. Heights & Weights of people, length of a object. Temperature and Dates are examples of Interval data type. Whereas Ratio data type tell us about the order, exact value between units, and they also have an absolute zero. Heights & Weights of people, length of a object"],
+         "context": [""]
+        },
+		{"tag": "362",
+         "patterns": ["Why Data Types are important?"],
+         "responses": ["Any statistical method, be it descriptive, predictive or prescriptive can be employed only based on the data type of the variable. Incorrect identification of data types leads to incorrect modeling which in turn leads to incorrect solution."],
+         "context": [""]
+        },
+		{"tag": "363",
+         "patterns": ["What do you mean by an Absolute Zero?"],
+         "responses": ["Absolute zero means true absence of a value. We do not have any absolute zero in Interval data type.  One such example is 0 Celsius temperature which does not mean that the temperature is absent."],
+         "context": [""]
+        },
+		{"tag": "364",
+         "patterns": ["Which data object in R is used to store and process categorical data?"],
+         "responses": ["The Factor data objects in R are used to store and process categorical data in R."],
+         "context": [""]
+        },
+		{"tag": "365",
+         "patterns": ["What is a Factor variable?"],
+         "responses": ["Factor variable is a variable which can take only limited set of values. In other words, the levels of a factor variable will be limited."],
+         "context": [""]
+        },
+		{"tag": "366",
+         "patterns": ["What is the difference between ‘%%’ and ‘%/%’?"],
+         "responses": ["‘%%’ gives remainder of the division of first vector with second while ‘%/%’ gives the quotient of the division of first vector with second."],
+         "context": [""]
+        },
+		{"tag": "367",
+         "patterns": ["What is lazy function evaluation in R?"],
+         "responses": ["The lazy evaluation of a function means, the argument is evaluated only if it is used inside the body of the function. If there is no reference to the argument in the body of the function then it is simply ignored."],
+         "context": [""]
+        },
+		{"tag": "369",
+         "patterns": ["What is the difference between subset() function and sample() function in R?"],
+         "responses": ["The subset() functions is used to select variables and observations. The sample() function is used to choose a random sample of size n from a dataset."],
+         "context": [""]
+        },
+		{"tag": "370",
+         "patterns": ["Is an array a matrix or a matrix an array?"],
+         "responses": ["Every matrix can be called an array but not the reverse. Matrix is always two dimensional but array can be of any dimension."],
+         "context": [""]
+        },
+		{"tag": "371",
+         "patterns": ["How do you convert the data in a JSON file to a data frame?"],
+         "responses": ["Using the function as.data.frame()"],
+         "context": [""]
+        },
+		{"tag": "372",
+         "patterns": ["What is R Base package?"],
+         "responses": ["This is the package which is loaded by default when R environment is set. It provides the basic functionalities like input/output, arithmetic calculations etc. in the R environment."],
+         "context": [""]
+        },
+		{"tag": "373",
+         "patterns": ["What is recycling of elements in a vector? Give an example."],
+         "responses": ["When two vectors of different length are involved in a operation then the elements of the shorter vector are reused to complete the operation. This is called element recycling. Example - v1 <- c(4,1,0,6) and V2 <- c(2,4) then v1*v2 gives (8,4,0,24). The elements 2 and 4 are repeated"],
+         "context": [""]
+        },
+		{"tag": "374",
+         "patterns": ["What is reshaping of data in R?"],
+         "responses": ["In R the data objects can be converted from one form to another. For example we can create a data frame by merging many lists. This involves a series of R commands to bring the data into the new format. This is called data reshaping."],
+         "context": [""]
+        },
+		{"tag": "375",
+         "patterns": ["What is the output of runif(4)?"],
+         "responses": ["It generates 4 random numbers between 0 and 1"],
+         "context": [""]
+        },
+		{"tag": "376",
+         "patterns": ["What are the different types of Discrete Probability Distributions?"],
+         "responses": ["Binomial, Poisson, Negative Binomial, Geometric, Hypergeometric are the examples of Discrete Probability Dsitributions"],
+         "context": [""]
+        },
+		{"tag": "377",
+         "patterns": ["What are the different types of Continuous Probability Distribution?"],
+         "responses": ["Normal, Exponential, t, f, Chi-square, Unifrom, Weibull are few of the examples of Continuous Probability Distributions"],
+         "context": [""]
+        },
+		{"tag": "378",
+         "patterns": ["What do you mean by Binomial Distribution?"],
+         "responses": ["Binomial Distribution can be simply thought of as the probability of Success of Failure outcome in an experiment that is conducted multiple times. Exmaples: Head and Tail outcomes after tossing a coin, Pass or Fail after appearing for an examination."],
+         "context": [""]
+        },
+		{"tag": "379",
+         "patterns": ["What is a Poisson Distribution?"],
+         "responses": ["Poisson Distribution gives the probability of a number of events happening in a fixed interval or space. Number of customers visiting a restaurant every day"],
+         "context": [""]
+        },
+		{"tag": "380",
+         "patterns": ["What do you mean by Negative Binomial Distribution?"],
+         "responses": ["It is the distribution of number of successes occuring in a sequence of independently and identically distributed Bernoulli trials before a specied number of failures occurs Example: From a lot of tires containing 5% defectives, if 4 tires have to be chosen at random then what is the probability of finding 2 defective tires before 4 good ones"],
+         "context": [""]
+        },
+		{"tag": "381",
+         "patterns": ["Explain Normal Distribution?"],
+         "responses": ["The normal distribution or a bell curve is a probability function that describes how the values of a variable are distributed by its mean and standard deviation. Distribution of heights, weights, salaries of people are examples of Normal distribution"],
+         "context": [""]
+        },
+		{"tag": "382",
+         "patterns": ["What is Chi-square distribution?"],
+         "responses": ["A standard normal deviate is a random sample from the standard normal distribution. The Chi-Square distribution is the distribution of the sum of squared standard normal deviates. The degrees of freedom of the distribution is equal to the number of standard normal deviates being summed. Therefore, Chi-Square with one degree of freedom, written as χ2(1), is simply the distribution of a single normal deviate squared. The area of a Chi-Square distribution below 4 is the same as the area of a standard normal distribution below 2, since 4 is 22."],
+         "context": [""]
+        },
+		{"tag": "383",
+         "patterns": ["What do you mean by Uniform Distribution?"],
+         "responses": ["Uniform Distribution is the simplest of all the statistical distributions. It is sometimes also known as a rectangular distribution, is a distribution that has constant probability. This distribution is defined by two parameters, a and b, a being minimum value and b the maximum value. Examples: Probability of a flight landing between 25 to 30 minutes when it is anounced that the flight will be landing in 30 minutes. Continuous Uniform Distribution (resembles rectangle) and Discrete Uniform Distribution (rectangle in the form of a dots) are the two types of Uniform Distribution Examples:"],
+         "context": [""]
+        },
+		{"tag": "384",
+         "patterns": ["What is T Distribution?"],
+         "responses": ["The T distribution also known as, Student’s T-distribution is a probability distribution that is used to estimate population parameters when the sample size is small and/or when the population variance is unknown."],
+         "context": [""]
+        },
+		{"tag": "385",
+         "patterns": ["Explain F Distribution?"],
+         "responses": ["Probability distribution for the statistical measure 'F-statistic' is called as F Distribution. It will be a skewed dsitribution used for ANOVA testing. Minimum value will be 0 and there is no standard maximum value. Here F statistic is nothing but the value that you get in the output of ANOVA or Regression analysis. F test will tell you if a group of variables are staisitically significant."],
+         "context": [""]
+        },
+		{"tag": "386",
+         "patterns": ["Explain Weibull Distribution?"],
+         "responses": ["The Weibull distribution is particularly useful in reliability work since it is a general distribution which, by adjustment of the distribution parameters, can be made to model a wide range of life distribution characteristics of different classes of engineered items. Weibull distribution is widely used in assess product reliability, analyze life data, and model failure times i.e, it is widely used in Reliability and Survival Analysis Based on the Beta parameter, Weibull distriution can take different distributions. If Beta<1 then Gamma, Beta=1 then Exponential, Beta=2 then Lognormal, Beta=3.5 then Normal."],
+         "context": [""]
+        },
+		{"tag": "387",
+         "patterns": ["When is it appropriate to employ a Bar plot?"],
+         "responses": ["A Bar plot of a numerical variable will be cluttered and makes it difficult for interpretation, whereas it makes sense to employ bar plot on categorical variable as we can interpret it in an efficient way."],
+         "context": [""]
+        },
+		{"tag": "388",
+         "patterns": ["Why Standard Deviation when we have Variance measure?"],
+         "responses": ["Variance is calculated to find how the individual data points are away from the mean, nothing but dispersion in the data. It is calculated as the averge of the square of the difference of mean from each data point. So from this calculation, we know for a fact that units are getting squared. There is way to get rid of squared units without having the necessity of standard deviation is by taking an absolute instead of square in the variance calculation. But the problem with taking absolute is it will lead to misleading results, for example, two variable X1(4,4,-4,-4) & X2(7,1,-6,-2) you get same variance as 4 if absolute is used and different variances as 4 & 4.74 when squared is used. For this reason we resort to squaring the difference of each value from it's mean. At this stage, if we interpret dispersion of data based on Variance, it shall confusion as the values & units are squared. Hence, we resort to Standard Deviation."],
+         "context": [""]
+        },
+		{"tag": "389",
+         "patterns": ["Why the probability associated with a single value of a continuous random variable is considered to be zero?"],
+         "responses": ["A continuous random variable takes an infinite number of possible values. As the number of values assumed by the random variable is infinite, the probability of observing a single value is zero."],
+         "context": [""]
+        },
+		{"tag": "390",
+         "patterns": ["List out the different Sampling Techniques."],
+         "responses": ["Probability Sampling and Non-Probability Sampling are the broader classifications of Sampling techniques. The difference lies between the above two is whether the sample selection is based on randomization or not. With randomization, every element gets equal chance to be picked up and to be part of sample for study."],
+         "context": [""]
+        },
+		{"tag": "391",
+         "patterns": ["What do you mean by Sampling Error?"],
+         "responses": ["An error occured during the sampling process if referred to as a Sampling Error. It can include both Systematic Sampling Error or Random Sampling Error. Systematic sampling error is the fault of the investigation, but random sampling error is not."],
+         "context": [""]
+        },
+		{"tag": "392",
+         "patterns": ["Explain Probability Sampling and it's types"],
+         "responses": ["This Sampling technique uses randomization to make sure that every element of the population gets an equal chance to be part of the selected sample. It’s alternatively known as random sampling. Simple Random Sampling, Stratified Sampling, Systematic Sampling, Cluster Sampling, Multi stage Sampling are the types of Probability Sampling"],
+         "context": [""]
+        },
+		{"tag": "393",
+         "patterns": ["Explain Simple Random Sampling."],
+         "responses": ["Every element has an equal chance of getting selected to be the part sample. It is used when we don’t have any kind of prior information about the target population.For example: Random selection of 20 students from class of 50 student. Each student has equal chance of getting selected. Here probability of selection is 1/50"],
+         "context": [""]
+        },
+		{"tag": "394",
+         "patterns": ["Explain Stratified Sampling."],
+         "responses": ["This technique divides the elements of the population into small subgroups (strata) based on the similarity in such a way that the elements within the group are homogeneous and heterogeneous among the other subgroups formed. And then the elements are randomly selected from each of these strata. We need to have prior information about the population to create subgroups."],
+         "context": [""]
+        },
+		{"tag": "395",
+         "patterns": ["Explain Cluster Sampling."],
+         "responses": ["Our entire population is divided into clusters or sections and then the clusters are randomly selected. All the elements of the cluster are used for sampling. Clusters are identified using details such as age, sex, location etc. Single Stage Cluster Sampling or Two Stage Cluster Sampling can be used to performm Cluster Sampling"],
+         "context": [""]
+        },
+		{"tag": "396",
+         "patterns": ["Explain Multi-Stage Sampling"],
+         "responses": ["It is the combination of one or more probability sampling techniques. Population is divided into multiple clusters and then these clusters are further divided and grouped into various sub groups (strata) based on similarity. One or more clusters can be randomly selected from each stratum. This process continues until the cluster can’t be divided anymore. For example country can be divided into states, cities, urban and rural and all the areas with similar characteristics can be merged together to form a strata."],
+         "context": [""]
+        },
+		{"tag": "397",
+         "patterns": ["Explain Non-Probability Sampling and it's types"],
+         "responses": ["It does not rely on randomization. This technique is more reliant on the researcherâ€™s ability to select elements for a sample. Outcome of sampling might be biased and makes difficult for all the elements of population to be part of the sample equally. This type of sampling is also known as non-random sampling. Convenience Samping, Purposive Sampling, Quota Sampling, Referral/Snowball Sampling are the types of Non-Probability Sampling"],
+         "context": [""]
+        },
+		{"tag": "398",
+         "patterns": ["Explain Convenience Sampling"],
+         "responses": ["Here the samples are selected based on the availability. This method is used when the availability of sample is rare and also costly. So based on the convenience samples are selected. For example: Researchers prefer this during the initial stages of survey research, as it’s quick and easy to deliver results."],
+         "context": [""]
+        },
+		{"tag": "399",
+         "patterns": ["Explain Purposive Sampling"],
+         "responses": ["This is based on the intention or the purpose of study. Only those elements will be selected from the population which suits the best for the purpose of our study.For Example: If we want to understand the thought process of the people who are interested in pursuing master’s degree then the selection criteria would be 'Are you interested for Masters in..?'. All the people who respond with a 'No' will be excluded from our sample."],
+         "context": [""]
+        },
+		{"tag": "400",
+         "patterns": ["Explain Quota Sampling"],
+         "responses": ["This type of sampling depends of some pre-set standard. It selects the representative sample from the population. Proportion of characteristics/ trait in sample should be same as population. Elements are selected until exact proportions of certain types of data is obtained or sufficient data in different categories is collected."],
+         "context": [""]
+        },
+		{"tag": "401",
+         "patterns": ["Explain Referral or Snowball Sampling"],
+         "responses": ["This technique is used in the situations where the population is completely unknown and rare. Therefore we will take the help from the first element which we select for the population and ask him to recommend other elements who will fit the description of the sample needed. So this referral technique goes on, increasing the size of population like a snowball.For example: It’s used in situations of highly sensitive topics like HIV Aids. Not all the victims will respond to the questions asked so researchers can contact people they know or volunteers to get in touch with the victims and collect information"],
+         "context": [""]
         }
-   ]
-}
+   
+]
+
+}   
