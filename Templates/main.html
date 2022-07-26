@@ -31,14 +31,23 @@ body {
   background-image: var(--body-bg);
   font-family: Helvetica, sans-serif;
 }
-a:link, a:visited {
+.dlink1{
   background-color: #f44336;
   color: white;
   padding: 14px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin-left: 180px;
+  margin-left: 50px;
+}
+.dlink2{
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .msger {
@@ -178,8 +187,10 @@ a:link, a:visited {
   <section class="msger">
     <header class="msger-header">
       <div class="msger-header-title">
-        <i  style="color:blue;margin-left:270px;" class="fas fa-bug"></i> Q&A Chatbot For Data Science <i style="color:blue;" class="fas fa-bug"></i>
-        <a  href="{{ url_for( 'downloadFile') }}"> Log File</a>
+        
+        <i  style="color:blue;margin-left:250px;" class="fas fa-bug"></i> Q&A Chatbot For Data Science <i style="color:blue;" class="fas fa-bug"></i>
+        <a class='dlink1'  href="{{ url_for( 'downloadQAFile') }}"> Q&A File</a>
+        <a  class='dlink2' href="{{ url_for( 'downloadLogFile') }}"> Log File</a>
       </div>
     </header>
 
@@ -189,7 +200,7 @@ a:link, a:visited {
         
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name">CoronaBot</div>
+            <div class="msg-info-name">ChatBot</div>
             
           </div>
 
@@ -218,7 +229,7 @@ a:link, a:visited {
     // Icons made by Freepik from www.flaticon.com
     const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
     const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-    const BOT_NAME = "CoronaBot";
+    const BOT_NAME = "ChatBot";
     const PERSON_NAME = "You";
 
     msgerForm.addEventListener("submit", event => {
@@ -271,7 +282,7 @@ a:link, a:visited {
         }
        else {
          appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
-         appendMessage(BOT_NAME, BOT_IMG, "left", "Are you satisfied?");
+         appendMessage(BOT_NAME, BOT_IMG, "left", "Are you satisfied? please type yes or no");
        }
        
         
